@@ -1,0 +1,45 @@
+02/18/21 1:17:50: style.scss - parse error: failed at `$ff-primary-url:	https://use.typekit.net/kll4grl.css;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 28, at column 1
+02/18/21 1:17:51: style.scss - parse error: failed at `$ff-primary-url:	https://use.typekit.net/kll4grl.css;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 28, at column 1
+02/18/21 1:18:02: style.scss - Undefined variable $lh-large: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 13, at column 2
+02/18/21 1:18:10: style.scss - Undefined variable $lh-large: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 13, at column 2
+02/18/21 1:18:21: style.scss - Undefined variable $lh-large: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 13, at column 2
+02/19/21 8:33:07: style.scss - Undefined mixin point-button: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 26, at column 2
+02/19/21 8:35:08: style.scss - Undefined mixin point-content: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/blocks/_content.scss on line 448, at column 3
+02/19/21 9:46:59: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:47:34: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:47:35: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:47:36: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:47:37: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:48:35: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:48:38: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:48:53: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:49:14: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:49:15: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 1
+02/19/21 9:49:15: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 6
+02/19/21 9:49:37: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 6
+02/19/21 9:49:38: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 6
+02/19/21 9:49:39: style.scss - parse error: failed at `$sh-color:` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 39, at column 6
+02/19/21 1:21:33: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:21:52: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:21:53: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:21:54: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:22:09: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:22:10: style.scss - parse error: failed at `$ls_medium			0.6px;` /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/assets/_variables.scss on line 22, at column 1
+02/19/21 1:22:18: style.scss - Undefined variable $sh-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 19, at column 4
+Call Stack:
+#0 mixin shape /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+02/19/21 1:22:36: style.scss - Undefined variable $sh-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 19, at column 4
+Call Stack:
+#0 mixin shape /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+02/19/21 1:52:35: style.scss - Undefined variable $br-rectangle-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 23, at column 4
+Call Stack:
+#0 mixin rectangle /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+02/19/21 1:52:45: style.scss - Undefined variable $br-rectangle-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 23, at column 4
+Call Stack:
+#0 mixin rectangle /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+02/19/21 1:52:49: style.scss - Undefined variable $br-rectangle-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 23, at column 4
+Call Stack:
+#0 mixin rectangle /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+02/19/21 1:52:56: style.scss - Undefined variable $br-rectangle-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 23, at column 4
+Call Stack:
+#0 mixin rectangle /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20

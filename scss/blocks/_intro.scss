@@ -1,0 +1,113 @@
+.intro {
+	$self: &;
+	padding: 96px 0 48px 0;
+
+	.wrapper {
+		max-width: 800px;
+
+		@include desktop {
+			max-width: 1120px;
+		}
+	}
+
+	&__title {
+
+		h1 {
+			text-align: center;
+			width: 100%;
+			position: relative;
+		}
+
+		&--grey {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: $cl-grey;
+
+			h1 {
+				color: $cl-white;
+			}
+		}
+
+		&--black {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: $cl-black;
+
+			h1 {
+				color: $cl-white;
+			}
+		}
+
+		&--primary {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: $cl-secondary;
+
+			h1 {
+				color: $cl-white;
+			}
+		}
+
+		&--secondary {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: $cl-primary;
+
+			h1 {
+				color: $cl-white;
+			}
+		}
+
+		&--image {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			position: relative;
+			background-position: center center;
+			background-size: cover;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background:
+					linear-gradient(
+						to bottom right, 
+						rgba($cl-black, 0.25) 0%,
+						rgba($cl-black, 0.5) 40%, 
+						rgba($cl-black, 0.25) 100%,
+					);
+			}
+
+			h1 {
+				color: $cl-white;
+			}
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-weight: $fw-medium;
+
+		h3:nth-child(1) {
+			margin-top: -48px;
+		}
+
+		@include desktop {
+			font-size: $fs-medium;
+		}
+
+		#{$self}__button-container {
+	
+			a {
+				margin: 0 24px 24px 24px;
+
+				&:last-of-type {
+					margin: 0 24px 48px 24px;
+				}
+			}
+		}
+	}
+}

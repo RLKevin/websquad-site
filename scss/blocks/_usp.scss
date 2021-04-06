@@ -1,0 +1,101 @@
+.usp {
+	$self: &;
+
+    &__slider {
+
+        .owl-stage {
+            display: flex;
+            align-items: center;
+
+            @include desktop {
+                display: inline-block;
+            }
+
+            .owl-item {
+
+                &.center {
+
+                    p {
+                        
+                        &:before {
+                            // animation: pulse 0.5s 1 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__slide {
+        padding: 0 16px;
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            padding: 0 48px;
+        }
+
+        @include desktop {
+            padding: 0;
+        }
+    }
+
+    p {
+        position: relative;
+        padding: 48px 0 48px 64px;
+        font-weight: $fw-medium;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 0;
+            width: 40px;
+            height: 40px;
+            border: 2px solid $cl-secondary;
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+            background-image: url(../img/icons/check-regular-primary.svg);
+            @include square;
+        }
+    }
+
+    // background
+
+    &--grey {
+        background: $cl-grey;  
+    }
+
+    &--black {
+        background: $cl-black;
+        color: $cl-white;
+
+        p {
+    
+            &:before {
+                border: 2px solid $cl-primary;
+                background-image: url(../img/icons/check-regular-secondary.svg);
+            }
+        }
+    }
+
+    &--primary {
+        background: $cl-secondary;
+        color: $cl-white;
+
+        p {
+    
+            &:before {
+                border: 2px solid $cl-primary;
+                background-image: url(../img/icons/check-regular-secondary.svg);
+            }
+        }
+    }
+
+    &--secondary {
+        background: $cl-primary;
+        color: $cl-white;
+    }
+}

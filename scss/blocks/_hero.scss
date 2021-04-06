@@ -1,0 +1,144 @@
+.hero {
+	$self: &;
+	position: relative;
+
+	&__slider {
+
+		#{$self}__container {
+			height: calc(100vh - 128px);
+			min-height: 640px;
+			max-height: 960px;
+	
+			&--top {
+				height: calc(100vh - 200px);
+			}
+		}
+	
+		#{$self}__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center center;
+	
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background:
+					linear-gradient(
+						to bottom, 
+						rgba($cl-black, 0) 0%,
+						rgba($cl-black, 0.5) 50%, 
+						rgba($cl-black, 0.25) 100%,
+					);
+			}
+		}
+	
+		#{$self}__text {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			text-align: center;
+			padding: 48px 0 0 0;
+	
+			h2 {
+				color: $cl-white;
+			}
+		
+			h3 {
+				color: $cl-white;
+				margin-top: -40px;
+			}
+		
+			#{$self}__button-container {
+	
+				a {
+					margin: 0 24px 24px 24px;
+	
+					&:last-of-type {
+						margin: 0 24px 48px 24px;
+					}
+				}
+			}
+		}
+
+		.owl-nav {
+			top: auto;
+			bottom: 0px;
+			display: none;
+
+			@include tablet {
+				display: flex;
+				top: 50%;
+				bottom: auto;
+			}
+		}
+
+		.owl-dots {
+			bottom: 96px;
+
+			@include tablet {
+				bottom: 64px;
+			}
+		}
+	}
+
+	&__scroll-button {
+		position: absolute;
+		bottom: 0;
+		right: 16px;
+		width: 48px;
+		height: 48px;
+		background: $cl-primary;
+		transition: all 0.25s ease-in-out;
+		z-index: 899;
+		margin: 40px 0;
+		@include rectangle;
+
+		@include tablet {
+			right: 48px;
+			width: 64px;
+			height: 64px;
+			margin: 48px 0;
+		}
+
+		@include desktop {
+			right: 96px;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			svg {
+				position: absolute;
+				top: calc(50% - 10px);
+				left: calc(50% - 10px);
+				width: 20px;
+				height: 20px;
+				color: $cl-white;
+				transition: 0.25s all ease-in-out;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+			background: darken($cl-primary, 10%);
+			
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

@@ -1,0 +1,563 @@
+.content {
+	$self: &;
+	padding: 96px 0 48px 0;
+
+	&__button-container {
+		width: 100%;
+
+		.wrapper {
+			max-width: 960px;
+	
+			@include desktop {
+				max-width: 1120px;
+			}
+		}
+
+		a {
+			margin: 0 48px 24px 0;
+
+			&:last-of-type {
+				margin: 0 0 48px 0;
+			}
+		}
+	}
+
+	&__file {
+
+		.wrapper {
+			max-width: 960px;
+	
+			@include desktop {
+				max-width: 1120px;
+			}
+		}
+
+		a {
+			display: block;
+			margin: 0 0 2px 0;
+			background: $cl-primary;
+			position: relative;
+			color: $cl-white;
+			font-weight: $fw-medium;
+			transition: 0.25s all ease-in-out;
+			padding: 16px 88px 16px 16px;
+			z-index: 1;
+			background: linear-gradient( to right, $cl-primary 0%, $cl-secondary 100% );
+			background-position: center left;
+			background-size: 200%;
+			@include rectangle;
+			
+			@include tablet {
+				padding: 16px 88px 16px 24px;
+			}
+			
+			&:last-of-type {
+				margin: 0 0 48px 0;
+			}
+
+			svg {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 64px;
+				height: 64px;
+				pointer-events: none;
+				padding: 22px;
+				transition: 0.25s all ease-in-out;
+			}
+	
+			&:hover {
+				cursor: pointer;
+				background-position: center right;
+	
+				svg {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	&__image {
+		max-width: 1408px;
+		margin: 0 auto 48px auto;
+
+		@include custom(1408px) {
+			overflow: hidden;
+			@include rectangle;
+		}
+	}
+
+	&__spacer {
+	
+		&--positive {
+			height: 48px;
+		}
+
+		&--negative {
+			margin: -48px 0 0 0;
+		}
+	
+	}
+
+	&__text {
+
+		.wrapper {
+			max-width: 960px;
+	
+			@include desktop {
+				max-width: 1120px;
+			}
+		}
+
+		h3:nth-child(2) {
+			margin-top: -48px;
+		}
+	}
+
+	&__text-code {
+		
+		.wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1600px;
+		}
+
+		h3:nth-child(2) {
+			margin-top: -48px;
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+
+		#{$self}__col {
+			width: 100%;
+
+			@include desktop {
+				width: calc(50% - 48px);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				&:not(:last-of-type) {
+					margin: 0 96px 0 0;
+				}
+			}
+
+			&--code {
+				padding: 0 0 48px 0;
+				min-height: 480px;
+			}
+		}
+	}
+
+	&__text-image {
+		
+		.wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1600px;
+		}
+
+		h3:nth-child(2) {
+			margin-top: -48px;
+		}
+
+		#{$self}__col {
+			width: 100%;
+
+			@include desktop {
+				width: calc(50% - 48px);
+
+				&:not(:last-of-type) {
+					margin: 0 96px 0 0;
+				}
+			}
+
+			&--text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			&--image {
+				margin: 0 0 48px 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				img {
+					@include rectangle;
+				}
+			}
+		}
+	}
+
+	&__text-video {
+		
+		.wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1600px;
+		}
+
+		h3:nth-child(2) {
+			margin-top: -48px;
+		}
+
+		#{$self}__col {
+			width: 100%;
+
+			@include desktop {
+				width: calc(50% - 48px);
+
+				&:not(:last-of-type) {
+					margin: 0 96px 0 0;
+				}
+			}
+
+			&--text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			&--video {
+				padding: 0 0 48px 0;
+			}
+		}
+
+		#{$self}__video-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			overflow: hidden;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			background: #030405;
+
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100% !important;
+				height: 100% !important;
+				transition: 0.5s all ease-in-out 1s;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: 0.25s all ease-in-out;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -32px 0 0 -32px;
+				width: 64px;
+				height: 64px;
+				background-color: $cl-primary;
+				pointer-events: none;
+				transition: 0.25s all ease-in-out;
+				background-image: url(../img/icons/play-regular-white.svg);
+				background-size: 20px 20px;
+				background-repeat: no-repeat;
+				background-position: 24px center;
+				pointer-events: none;
+				@include square;
+			}
+
+			&:hover {
+				cursor: pointer;
+
+				img {
+					opacity: 0.75;
+				}
+
+				&:after {
+					background-color: darken($cl-primary, 10%);
+				}
+			}
+
+			&.active {
+
+				img {
+					opacity: 0;
+					pointer-events: none;	
+				}
+
+				iframe {
+					opacity: 1;
+					pointer-events: all;
+				}
+
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	&__video {
+		max-width: 1408px;
+		margin: 0 auto 48px auto;
+		
+		.wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#{$self}__video-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			overflow: hidden;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			background: #030405;
+
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100% !important;
+				height: 100% !important;
+				transition: 0.5s all ease-in-out 1s;
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transition: 0.25s all ease-in-out;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -32px 0 0 -32px;
+				width: 64px;
+				height: 64px;
+				background-color: $cl-primary;
+				pointer-events: none;
+				transition: 0.25s all ease-in-out;
+				background-image: url(../img/icons/play-regular-white.svg);
+				background-size: 20px 20px;
+				background-repeat: no-repeat;
+				background-position: 24px center;
+				pointer-events: none;
+				@include square;		
+			}
+
+			&:hover {
+				cursor: pointer;
+
+				img {
+					opacity: 0.75;
+				}
+
+				&:after {
+					background-color: darken($cl-primary, 10%);
+				}
+			}
+
+			&.active {
+
+				img {
+					opacity: 0;
+					pointer-events: none;	
+				}
+
+				iframe {
+					opacity: 1;
+					pointer-events: all;
+				}
+
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	// align
+
+	&--center {
+		text-align: center;
+
+		ul {
+			
+			li {
+
+				&:before {
+					position: relative;
+					padding: 0 8px 0 0;
+				}
+			}
+		}
+
+		#{$self}__button-container {
+	
+			a {
+				margin: 0 24px 24px 24px;
+	
+				&:last-of-type {
+					margin: 0 24px 48px 24px;
+				}
+			}
+		}
+
+		#{$self}__file {
+			text-align: left;
+		}	
+	}
+
+	&--right {
+		
+		.wrapper {
+
+			#{$self}__col {
+				order: 2;
+				
+				@include desktop {
+					margin: 0;
+				}
+	
+				&:last-of-type {
+					order: 1;
+
+					@include desktop {
+						margin: 0 96px 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	// background
+
+	&--white {
+
+		&:before,
+		&:after {
+			background: $cl-white;
+		}
+	}
+
+	&--grey {
+		background: $cl-grey;
+
+		&:before,
+		&:after {
+			background: $cl-grey;
+		}
+	}
+
+	&--black {
+		background: $cl-black;
+
+		&:before,
+		&:after {
+			background: $cl-black;
+		}
+
+		h2, h3, p, li, em {
+			color: $cl-white;
+		}
+	}
+
+	&--primary {
+		background: $cl-secondary;
+
+		&:before,
+		&:after {
+			background: $cl-secondary;
+		}
+
+		h2, h3, p, li, em {
+			color: $cl-white;
+		}
+
+		.button {
+			border: 2px solid $cl-white;
+		}
+
+		#{$self}__file {
+
+			a {
+				border: 2px solid $cl-white;
+			}
+		}
+	}
+
+	&--secondary {
+		background: $cl-primary;
+
+		&:before,
+		&:after {
+			background: $cl-primary;
+		}
+
+		h2, h3, p, li, em {
+			color: $cl-white;
+		}
+
+		strong {
+			color: $cl-secondary;
+		}
+
+		p a, li a {
+			color: $cl-secondary;
+
+			&:hover {
+				color: darken($cl-secondary, 10%);
+			}
+		}
+
+		ul {
+			
+			li {
+
+				&:before {
+					color: $cl-secondary;
+				}
+			}
+		}
+
+		blockquote {
+			border-left: 2px solid $cl-secondary;
+
+			&:before {
+				background-image: url(../img/icons/quote-right-solid-primary.svg);
+			}
+		}
+
+		.button {
+			border: 2px solid $cl-white;
+		}
+
+		#{$self}__file {
+
+			a {
+				border: 2px solid $cl-white;
+			}
+		}
+	}
+}

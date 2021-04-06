@@ -1,0 +1,140 @@
+.map {
+	$self: &;
+	position: relative;
+	overflow: hidden;
+
+	&__map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: calc(100% + 96px);
+		width: 100%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		padding: 96px 16px;
+		background: $cl-secondary;
+		// min-height: 480px;
+		// width: calc(100% + 32px);
+		// left: -16px;
+		background:
+			linear-gradient(
+				to right, 
+				rgba($cl-secondary, 1) 0%,
+				rgba($cl-secondary, 0.75) 100%,
+			);
+		margin: 96px 0;
+		@include rectangle;
+
+		@include tablet {
+			width: 100%;
+			left: 0;
+			padding: 96px 48px;
+		}
+
+		@include desktop {
+			max-width: calc(50% - 48px);
+			background: $cl-secondary;
+		}
+
+		@include custom(1920px) {
+			max-width: calc(25% - 72px);
+			background: $cl-secondary;
+		}
+
+		h2 {
+			padding: 0 0 24px 0;
+			color: $cl-primary;
+		}
+
+		ul {
+			
+			&:not(:last-of-type) {
+				margin: 0 0 24px 0;
+			}
+
+			li {
+				color: $cl-white;
+
+				&:not(:last-of-type) {
+
+					a {
+						margin: 0 0 8px 0;;
+					}
+				}
+
+				a {
+					display: block;
+					position: relative;
+					height: 40px;
+					width: auto;
+					overflow: hidden;
+					padding: 0 0 0 64px;
+					transition: 0.25s all ease-in-out;
+					line-height: 40px;
+					color: $cl-black;
+					white-space: nowrap;
+					color: $cl-white;
+					text-overflow: ellipsis;
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 40px;
+						height: 40px;
+						border: 2px solid $cl-white;
+						background-size: 16px 16px;
+						background-repeat: no-repeat;
+						background-position: center;
+						transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+						@include square;
+					}
+
+					&.phone {
+
+						&:before {
+							background-image: url(../img/icons/mobile-android-regular-white.svg);
+						}
+					}
+
+					&.mail {
+
+						&:before {
+							background-image: url(../img/icons/envelope-open-regular-white.svg);
+						}
+					}
+
+					&:hover {
+
+						&:before {
+							border: 2px solid $cl-primary;
+							cursor: pointer;
+						}
+
+						&.phone {
+
+							&:before {
+								background-image: url(../img/icons/mobile-android-regular-secondary.svg);
+							}
+						}
+	
+						&.mail {
+
+							&:before {
+								background-image: url(../img/icons/envelope-open-regular-secondary.svg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
+}

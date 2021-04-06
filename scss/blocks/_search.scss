@@ -1,0 +1,147 @@
+.search {
+	$self: &;
+	padding: 96px 0 48px;
+
+	.wrapper {
+		max-width: 960px;
+
+		@include desktop {
+			max-width: 1120px;
+		}
+	}
+
+	h2 {
+
+		span {
+			color: $cl-secondary;
+		}
+	}
+
+	h3 {
+		margin-top: -40px;
+	}
+
+	a {
+		display: block;
+		margin: 0 0 2px 0;
+		background: $cl-primary;
+		position: relative;
+		color: $cl-white;
+		font-weight: $fw-medium;
+		transition: 0.25s all ease-in-out;
+		padding: 16px 88px 16px 16px;
+		z-index: 1;
+		background: linear-gradient( to right, $cl-primary 0%, $cl-secondary 100% );
+		background-position: center left;
+		background-size: 200%;
+		text-align: left;
+		@include rectangle;
+		
+		@include tablet {
+			padding: 16px 88px 16px 24px;
+		}
+		
+		&:last-of-type {
+			margin: 0 0 48px 0;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 64px;
+			height: 64px;
+			pointer-events: none;
+			padding: 22px;
+			transition: 0.25s all ease-in-out;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-position: center right;
+
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	// background
+
+	&--white {
+		background: $cl-white;
+
+		#{$self}__result {
+			line-height: 56px;
+			border: 2px solid lighten($cl-grey, 20%);
+
+			&::before {
+				top: -2px;
+				right: -2px;
+				width: 60px;
+				border: 2px solid lighten($cl-grey, 20%);
+			}
+
+			&::after {
+				top: -2px;
+				right: -2px;
+				width: 60px;
+			}
+		}
+	}
+
+	&--grey {
+		background: $cl-grey;
+
+		&:before,
+		&:after {
+			background: $cl-grey;
+		}
+	}
+
+	&--black {
+		background: $cl-black;
+
+		h2, p {
+			color: $cl-white;
+		}
+	}
+
+	&--primary {
+		background: $cl-secondary;
+
+		h2, p {
+			color: $cl-white;
+		}
+	}
+
+	&--secondary {
+		background: $cl-primary;
+
+		h2, p {
+			color: $cl-white;
+		}
+
+		strong {
+			color: $cl-secondary;
+		}
+
+		a {
+			background: $cl-secondary;
+	
+			&:hover {
+				background: darken($cl-secondary, 10%);
+			}
+		}
+	}
+
+	// align
+
+	&--left {
+		text-align: left;
+	}
+
+	&--center {
+		text-align: center;
+	}
+}

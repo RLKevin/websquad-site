@@ -1,0 +1,725 @@
+.header {
+	$self: &;
+	position: relative;
+	z-index: 999;
+
+	&__topmenu {
+		background: $cl-black;
+
+		#{$self}__submenu {
+	
+			ul {
+				display: flex;
+				justify-content: flex-end;
+				padding: 16px 0;
+	
+				li {
+					margin: 0 8px 0 0;
+	
+					@include tablet {
+						margin: 0 24px 0 0;
+					}
+	
+					&:last-of-type {
+						margin: 0;
+					}
+
+					a {
+						display: block;
+						position: relative;
+						height: 40px;
+						width: 40px;
+						overflow: hidden;
+						padding: 0 0 0 40px;
+						transition: 0.25s all ease-in-out;
+						line-height: 40px;
+						color: $cl-white;
+						white-space: nowrap;
+
+						svg {
+							width: 40px;
+							height: 40px;
+							padding: 12px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							color: $cl-white;
+							transition: 0.25s all ease-in-out;
+						}
+	
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							border: 2px solid $cl-white;
+							transition: 0.25s all ease-in-out;
+							@include square;
+						}
+
+						&:hover {
+							cursor: pointer;
+
+							&::before {
+								border: 2px solid $cl-primary;
+							}
+							
+							svg {
+								color: $cl-primary;
+							}
+						}
+	
+						&.phone {
+	
+							@include tablet {
+								padding: 0 0 0 64px;
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-button {
+
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__mainmenu {
+			
+		.wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		#{$self}__logo {
+			height: 128px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-right: auto;
+
+			a {
+
+				img {
+					height: auto;
+					max-height: 80px;
+					width: auto;
+					max-width: 200px;
+					position: relative;
+		
+					@include tablet {
+						max-width: 280px;
+					}
+				}
+			}
+		}
+
+		#{$self}__menu {
+			display: none;
+
+			ul {
+				display: flex;
+				margin: 0 0 0 48px;
+
+				li {
+					margin: 0 24px 0 0;
+
+					&:last-of-type {
+						margin: 0;
+					}
+
+					a {
+						color: rgba($cl-black, 0.5);
+						transition: 0.25s all ease-in-out;
+						white-space: nowrap;
+					}
+
+					&.current-menu-item,
+					&.current-menu-parent,
+					&.current-menu-ancestor,
+					&:hover {
+
+						a {
+							color: $cl-black;
+						}
+						
+					}
+
+					.sub-menu {
+						display: none;
+					}
+				}
+			}
+		}
+
+		#{$self}__submenu {
+			display: none;
+
+			@include custom(800px) {
+				display: block;
+			}
+	
+			ul {
+				display: flex;
+				margin: 0 0 0 48px;
+	
+				li {
+					margin: 0 8px 0 0;
+	
+					@include tablet {
+						margin: 0 24px 0 0;
+					}
+	
+					&:last-of-type {
+						margin: 0;
+					}
+	
+					a {
+						display: block;
+						position: relative;
+						height: 40px;
+						width: 40px;
+						overflow: hidden;
+						padding: 0 0 0 40px;
+						transition: 0.25s all ease-in-out;
+						line-height: 40px;
+						color: $cl-black;
+						white-space: nowrap;
+
+						svg {
+							width: 40px;
+							height: 40px;
+							padding: 12px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							color: $cl-secondary;
+							transition: 0.25s all ease-in-out;
+						}
+	
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							border: 2px solid $cl-secondary;
+							transition: 0.25s all ease-in-out;
+							@include square;
+						}
+
+						&:hover {
+							cursor: pointer;
+
+							&::before {
+								border: 2px solid $cl-primary;
+							}
+							
+							svg {
+								color: $cl-primary;
+							}
+						}
+	
+						&.phone {
+	
+							@include custom(1600px) {
+								padding: 0 0 0 64px;
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-button {
+
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+				}
+			}
+		}
+
+		#{$self}__menu-button,
+		#{$self}__search-button,
+		#{$self}__scroll-button {
+			position: fixed;
+			top: 40px;
+			right: 16px;
+			width: 48px;
+			height: 48px;
+			background: $cl-primary;
+			z-index: 999;
+			display: none;
+			overflow: hidden;
+			@include square;
+			@include shadow;
+
+			@include tablet {
+				top: 32px;
+				right: 48px;
+				width: 64px;
+				height: 64px;
+			}
+
+			@include desktop {
+				right: 96px;
+			}
+
+			svg {
+				position: absolute;
+				top: calc(50% - 10px);
+				left: calc(50% - 10px);
+				width: 20px;
+				height: 20px;
+				color: $cl-white;
+				transition: 0.25s all ease-in-out;
+
+				&:last-of-type {
+					top: 48px;
+					opacity: 0;
+
+					@include tablet {
+						top: 64px;
+					}
+				}
+			}
+
+			&:hover {
+				cursor: pointer;
+				background: darken($cl-primary, 10%);
+
+				svg {
+					transform: scale(1.1);
+				}
+			}
+
+			&.active,
+			&.show {
+				
+				svg {
+					top: -48px;
+					opacity: 0;
+
+					@include tablet {
+						top: -64px;
+					}
+					
+					&:last-of-type {
+						top: calc(50% - 8px);
+						opacity: 1;
+
+						@include tablet {
+							top: calc(50% - 10px);
+						}
+					}
+				}
+			}
+		}
+
+		#{$self}__scroll-button {
+			top: auto;
+			bottom: 0;
+			margin: 40px 0;
+			z-index: 899;
+
+			@include tablet {
+				margin: 32px 0;
+			}
+		}
+	}
+
+	&__sidemenu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: $cl-black;
+		padding: 40px 16px 0 16px;
+		overflow: auto;
+		transition: 0.5s right ease-in-out;
+		z-index: 900;
+
+		@include desktop {
+			width: 640px;
+		}
+
+		&.active {
+			right: 0;
+		}
+
+		@include tablet {
+			padding: 32px 48px 0 48px;
+		}
+
+		@include desktop {
+			padding: 32px 96px 0 96px;
+		}
+
+		#{$self}__submenu {
+			margin: 0 0 48px 0;
+	
+			ul {
+				display: flex;
+				align-items: center;
+				height: 48px;
+
+				@include tablet {
+					height: 64px;
+				}
+	
+				li {
+					margin: 0 8px 0 0;
+	
+					@include tablet {
+						margin: 0 24px 0 0;
+					}
+	
+					&:last-of-type {
+						margin: 0;
+					}
+
+					a {
+						display: block;
+						position: relative;
+						height: 40px;
+						width: 40px;
+						overflow: hidden;
+						padding: 0 0 0 40px;
+						transition: 0.25s all ease-in-out;
+						line-height: 40px;
+						color: $cl-white;
+						white-space: nowrap;
+
+						svg {
+							width: 40px;
+							height: 40px;
+							padding: 12px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							color: $cl-white;
+							transition: 0.25s all ease-in-out;
+						}
+	
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							border: 2px solid $cl-white;
+							transition: 0.25s all ease-in-out;
+							@include square;
+						}
+
+						&:hover {
+							cursor: pointer;
+
+							&::before {
+								border: 2px solid $cl-primary;
+							}
+							
+							svg {
+								color: $cl-primary;
+							}
+						}
+	
+						&.phone {
+	
+							@include tablet {
+								padding: 0 0 0 64px;
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-button {
+
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+				}
+			}
+		}
+
+		#{$self}__menu {
+
+			ul {
+
+				li {
+					padding: 16px 0 18px;
+					position: relative;
+					margin: 0 0 48px 0;
+
+					@include tablet {
+						padding: 24px 0 26px;
+					}
+
+					&:not(:last-of-type) {
+						margin: 0;
+
+						&:after {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 2px;
+							background: $cl-primary;
+						}
+					}
+
+					a {
+						color: $cl-white;
+						font-family: $ff-secondary;
+						transition: 0.25s all ease-in-out;
+						white-space: nowrap;
+
+						@include tablet {
+							font-size: $fs-medium;
+						}
+					}
+
+					&.current-menu-item,
+					&.current-menu-parent,
+					&.current-menu-ancestor,
+					&:hover {
+
+						a {
+							color: $cl-primary;
+						}
+						
+					}
+
+					.sub-menu {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	&__searchmenu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: $cl-grey;
+		overflow: auto;
+		transition: 0.50s right ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 900;
+
+		@include desktop {
+			width: 640px;
+		}
+
+		&.active {
+			right: 0;
+		}
+
+		@include tablet {
+			padding: 32px 48px 0 48px;
+		}
+
+		@include desktop {
+			padding: 32px 96px 0 96px;
+		}
+
+		.search {
+			display: flex;
+			padding: 0;
+			width: 100%;
+			max-width: 280px;
+			position: relative;
+
+			@include tablet {
+				max-width: 400px;
+			}
+
+			&__input {
+				width: 100%;
+				height: 48px;
+
+				@include tablet {
+					height: 64px;
+				}
+				
+				input {
+					display: block;
+					width: 100%;
+					height: 100%;
+					line-height: 48px;
+					padding: 0 64px 0 16px;
+					border: none;
+					@include rectangle;
+
+					@include tablet {
+						height: 64px;
+						padding: 0 80px 0 16px;
+						@include rectangle;
+					}
+				}
+
+			}
+
+			&__submit {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 48px;
+				height: 48px;
+
+				@include tablet {
+					width: 64px;
+					height: 64px;
+				}
+
+				svg {
+					width: 48px;
+					height: 48px;
+					padding: 16px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: $cl-white;
+					transition: 0.5s all ease-in-out;
+
+					@include tablet {
+						width: 64px;
+						height: 64px;
+						padding: 22px;
+					}
+				}
+
+				// &:after {
+				// 	content: '';
+				// 	position: absolute;
+				// 	top: 0;
+				// 	left: 0;
+				// 	width: 100%;
+				// 	height: 100%;
+				// 	background-image: url(../img/icons/search-regular-white.svg);
+				// 	background-size: 16px 16px;
+				// 	background-repeat: no-repeat;
+				// 	background-position: center;
+				// 	pointer-events: none;
+				// }
+
+				input {
+					display: block;
+					height: 100%;
+					width: 100%;
+					background: $cl-primary;
+					border: none;
+					transition: 0.25s all ease-in-out;
+					@include rectangle;
+				}
+
+				&:hover {
+					cursor: pointer;
+					
+					svg {
+						transform: scale(1.1);
+					}
+
+					input {
+						background: darken($cl-primary, 10%);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+	&--top {
+
+		#{$self}__mainmenu {
+
+			#{$self}__menu-button,
+			#{$self}__search-button,
+			#{$self}__scroll-button {
+				top: 112px;
+
+				@include tablet {
+					top: 104px;
+				}
+			}
+
+			#{$self}__menu-button,
+			#{$self}__search-button {
+				position: absolute;
+
+				&.scroll {
+					position: fixed;
+					top: 40px;
+
+					@include tablet {
+						top: 32px;
+					}
+				}
+			}
+		}
+	}
+
+	&--button {
+
+		#{$self}__mainmenu {
+
+			#{$self}__submenu {
+		
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+
+					li {
+		
+						a {
+		
+							&.phone {
+		
+								@include desktop {
+									padding: 0 0 0 64px;
+									width: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			#{$self}__menu-button {
+				display: block !important;
+			}
+		}
+	}
+}

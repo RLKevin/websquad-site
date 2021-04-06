@@ -1,0 +1,300 @@
+button,
+input,
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"],
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"],
+select, 
+textarea,
+label { 
+	font-family: $ff-secondary;
+	font-size: $fs-small;
+	color: $cl-black;
+	letter-spacing: $ls_medium;
+	line-height: $lh-large;
+	font-weight: $fw-regular;
+	padding: 0 16px;
+	border: none;
+	position: relative;
+	-webkit-appearance: none;
+	-webkit-appearance: button;
+	@include rectangle;
+}
+
+button {
+	padding: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	
+	input {
+		width: 100%;
+		height: 64px;
+		line-height: 64px;
+	}
+
+	textarea {
+		display: block;
+		width: 100%;
+		padding: 16px;
+		border: none;
+		height: 144px;
+	}
+
+	label {
+		display: block;
+		width: 100%;
+		font-size: $fs-tiny;
+		font-weight: $fw-medium;
+		color: $cl-secondary;
+		margin-bottom: 24px;
+		padding: 0;
+		-webkit-appearance: none;
+	}
+
+	.validation_error {
+		position: relative;
+		padding: 16px 0 16px 16px;
+		margin: 0 0 48px 0;
+		border-left: 2px solid $cl-error;
+		order: 2;
+
+		@include desktop {
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+		}
+	}
+
+	.gform_body {
+		margin-bottom: 72px;
+	
+		li {
+			
+			&.gfield {
+				margin-bottom: 24px;
+
+				&.hide {
+					visibility: hidden;
+					height: 0px;
+					overflow: hidden;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.gfield_description {
+				margin: -22px 0 24px 0;
+				font-style: italic;
+			}
+
+			&.gfield_error {
+
+				label {
+					color: $cl-error;
+				}
+			}
+
+			&.gfield_visibility_hidden {
+				display: none;
+			}
+
+			&.gform_validation_container {
+				display: none;
+			}
+
+			.validation_message {
+				display: none;
+			}
+
+			.ginput_container_select {
+				width: 100%;
+				background: $cl-white;
+				line-height: 64px;
+				height: 64px;
+				position: relative;
+				@include rectangle;
+				overflow: hidden;
+				
+				select {
+					width: 100%;
+					height: 100%;
+					font-family: $ff-secondary;
+					font-size: $fs-small;
+					color: $cl-black;
+					padding: 0 16px;
+					background: transparent;
+					z-index: 1;
+					text-align: left;
+				}
+								
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 64px;
+					height: 64px;
+					pointer-events: none;
+					background-image: url(../img/icons/arrow-down-regular-white.svg);
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: 16px 16px;
+					background-color: $cl-primary;
+					z-index: 1;
+					transition: 0.25s all ease-in-out;
+					@include rectangle;
+				}
+
+				&:hover {
+
+					&::after {
+						background-color: darken($cl-primary, 10%);
+					}
+				}
+
+				select {
+
+					&:hover {
+						cursor: pointer !important;
+					}
+				}
+			}
+
+			.ginput_container_checkbox {
+
+				.gfield_checkbox {
+					align-items: center;
+					margin: 0;
+				
+					li {
+						position: relative;
+						display: block;
+						width: 100%;
+						@include rectangle;
+						overflow: hidden;
+						background: $cl-white;
+						
+						&:not(:first-of-type) {
+							margin-top: 2px;
+						}
+				
+						input {
+							display: block;
+							width: 64px;
+							height: 64px;
+							-webkit-appearance: none;
+							transition: 0.25s all ease-in-out;
+							position: absolute;
+							top: 0;
+							left: 0;
+				
+							&:after {
+								content: '';
+								position: absolute;
+								top: 16px;
+								right: 16px;
+								width: 32px;
+								height: 32px;
+								background-image: url(../img/icons/check-regular-white.svg);
+								background-repeat: no-repeat;
+								background-position: center center;
+								background-size: 16px 16px;
+								background-color: darken($cl-grey, 10%);
+								// z-index: 999;
+								transition: 0.25s all ease-in-out;
+								@include rectangle;
+							}
+				
+							&:checked:after {
+								background-color: $cl-primary;
+							}
+
+							&:hover {
+
+								&::after {
+									background-color: darken($cl-grey, 20%);
+								}
+
+								&:checked:after {
+									background-color: darken($cl-primary, 10%);
+								}
+							}
+						}
+				
+						label {
+							padding: 16px 16px 16px 64px;
+							min-height: 64px;
+							color: $cl-black;
+							font-size: $fs-small;
+							font-weight: $fw-regular;
+							text-transform: initial;
+							margin: 0;
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+
+			.ginput_container_total {
+				width: 100%;
+				height: 64px;
+				line-height: 64px;
+				padding: 0 16px;
+				background: darken($cl-grey, 10%);
+				@include rectangle;
+			}
+		}
+	}
+
+	.gform_footer {
+		position: relative;
+		text-align: right;
+		order: 3;
+	
+		.gform_ajax_spinner {
+			width: 64px;
+			height: 64px;
+			padding: 24px;
+			position: absolute;
+			top: 50%;
+			right: 4px;
+			transform: translate(0, -50%);
+			z-index: 99999;
+	
+			@include desktop {
+				bottom: 24px;
+				right: 0px;
+			}
+		}
+	
+		.button {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

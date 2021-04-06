@@ -1,0 +1,13 @@
+
+
+- letter spacing in variables
+
+- scroll down button fixen
+
+- zoeken juiste url
+
+- scss koppelen
+
+oud
+
+- child terugzetten en onderling weer verdelen

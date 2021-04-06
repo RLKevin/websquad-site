@@ -1,0 +1,49 @@
+// point - up
+
+position: relative;
+margin-top: -48px;
+padding-top: 96px;
+border-top: 96px solid $cl-grey;
+
+&:before,
+&:after {
+	content: '';
+	position: absolute;
+	top: -96px;
+	left: 0;
+	width: calc(50% + 8px);
+	height: 96px;
+	border-radius: 0 0 288px 0 / 0 0 96px 0;
+	background: $cl-white;
+}
+
+&:after {
+	left: auto;
+	right: 0;
+	border-radius: 0 0 0 288px / 0 0 0 96px;
+}
+
+// point - down
+
+position: relative;
+padding-top: 48px;
+border-top: 96px solid $cl-white;
+
+&:before,
+&:after {
+	content: '';
+	position: absolute;
+	top: -96px;
+	left: 0;
+	width: calc(50% + 8px);
+	height: 96px;
+	border-radius: 0 288px 0 0 / 0 96px 0 0;
+	background: $cl-grey;
+}
+
+&:after {
+	left: auto;
+	right: 0;
+	border-radius: 288px 0 0 0 / 96px 0 0 0;
+}
+

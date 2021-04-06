@@ -1,0 +1,111 @@
+.open {
+	$self: &;
+	padding: 96px 0 96px 0;
+
+	.wrapper {
+		max-width: 960px;
+
+		@include desktop {
+			max-width: 1120px;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			position: relative;
+			width: 100%;
+			background: $cl-grey;
+			@include rectangle;
+
+			&:not(:last-of-type) {
+				margin: 0 0 2px 0;
+			}
+
+			@include desktop {
+				width: calc(50% - 48px);
+				
+				&:not(:last-of-type) {
+					margin: 0 96px 2px 0;
+
+					&:nth-of-type(2n+2) {
+						margin: 0 0 2px 0;
+					}
+				}
+			}
+
+			p {
+				padding: 16px 24px 16px 80px;
+				color: $cl-black;
+			}
+
+			span {
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				width: 64px;
+				height: 64px;
+				line-height: 64px;
+				text-transform: uppercase;
+				text-align: center;
+				background: $cl-primary;
+				color: $cl-white;
+				font-weight: $fw-medium;
+				@include rectangle;
+			}
+		}
+	}
+
+	// background
+
+	&--grey {
+		background: $cl-grey;
+
+		ul {
+	
+			li {
+				background: $cl-white;
+			}
+		}
+	}
+
+	&--black {
+		background: $cl-black;
+
+		ul {
+	
+			li {
+				background: $cl-white;
+			}
+		}
+	}
+
+	&--primary {
+		background: $cl-secondary;
+
+		ul {
+	
+			li {
+				background: $cl-white;
+			}
+		}
+	}
+
+	&--secondary {
+		background: $cl-primary;
+
+		ul {
+	
+			li {
+				background: $cl-white;
+
+				span {
+					background: $cl-secondary;
+				}
+			}
+		}
+	}
+}

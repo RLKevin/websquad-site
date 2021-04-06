@@ -1,0 +1,239 @@
+.table {
+	$self: &;
+	padding: 96px 0 48px 0;
+
+	.wrapper {
+		max-width: 960px;
+
+		@include desktop {
+			max-width: 1120px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 2px 0;
+		overflow: hidden;
+		@include rectangle;
+		
+		#{$self}__col {
+			background: $cl-grey;
+			padding: 16px;
+			
+			@include tablet {
+				padding: 16px 24px;	
+			}
+
+			&--left {
+				width: 100%;
+
+				@include desktop {
+					width: 50%;
+				}				
+			}
+
+			&--right {
+				width: 100%;
+				
+				@include desktop {
+					width: 50%;
+				}
+			}
+		}
+		
+		&--title {
+			margin: 0 0 48px 0;
+
+			#{$self}__col {
+				
+				&--left {
+					width: 100%;
+					background: $cl-primary;
+					font-weight: $fw-medium;
+					color: $cl-white;
+				}
+
+				&--right {
+					display: none;
+				}
+			}
+		}
+
+		&--normal {
+
+			#{$self}__col {
+				background: $cl-grey;
+	
+				&--left {
+					font-weight: $fw-medium;
+					padding: 16px 16px 0 16px;
+
+					@include tablet {
+						padding: 16px 24px 0 24px;	
+					}
+
+					@include desktop {
+						padding: 16px 24px;	
+					}
+				}
+	
+				&--right {
+					padding: 0 16px 16px 16px;
+
+					@include tablet {
+						padding: 0 24px 16px 24px;	
+					}
+
+					@include desktop {
+						padding: 16px 24px;	
+					}
+				}
+			}
+
+		}
+
+		&--note {
+			border-left: 2px solid $cl-primary;
+			margin: 48px 0 -46px 0;
+
+			&:last-of-type {
+				margin: 48px 0;
+			}
+
+			#{$self}__col {
+				color: $cl-secondary;
+				font-style: italic;
+
+				&--left {
+					width: 100%;
+				}
+	
+				&--right {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// background
+
+	&--white {
+	}
+
+	&--grey {
+		background: $cl-grey;
+
+		#{$self}__row {
+			
+			#{$self}__col {
+				background: $cl-white;
+			}
+			
+			&--title {
+	
+				#{$self}__col {
+					
+					&--left {
+						background: $cl-primary;
+					}
+				}
+			}
+	
+			&--normal {
+	
+				#{$self}__col {
+					background: $cl-white;
+				}
+			}
+		}
+	}
+
+	&--black {
+		background: $cl-black;
+
+		#{$self}__row {
+			
+			#{$self}__col {
+				background: $cl-white;
+			}
+			
+			&--title {
+	
+				#{$self}__col {
+					
+					&--left {
+						background: $cl-primary;
+					}
+				}
+			}
+	
+			&--normal {
+	
+				#{$self}__col {
+					background: $cl-white;
+				}
+			}
+		}
+	}
+
+	&--primary {
+		background: $cl-secondary;
+
+		#{$self}__row {
+			
+			#{$self}__col {
+				background: $cl-white;
+			}
+			
+			&--title {
+	
+				#{$self}__col {
+					
+					&--left {
+						background: $cl-primary;
+					}
+				}
+			}
+	
+			&--normal {
+	
+				#{$self}__col {
+					background: $cl-white;
+				}
+			}
+		}
+	}
+
+	&--secondary {
+		background: $cl-primary;
+
+		#{$self}__row {
+			
+			#{$self}__col {
+				background: $cl-white;
+			}
+			
+			&--title {
+	
+				#{$self}__col {
+					
+					&--left {
+						background: $cl-secondary;
+					}
+				}
+			}
+	
+			&--normal {
+	
+				#{$self}__col {
+					background: $cl-white;
+				}
+			}
+
+			&--note {
+				border-left: 2px solid $cl-secondary;
+			}
+		}
+	}
+}

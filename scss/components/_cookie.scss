@@ -1,0 +1,46 @@
+.switchcookie {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($cl-black, 0.96);
+	color: $cl-white;
+    transition: all 0.25s ease-in-out;
+	z-index: 9999;
+	@include padding;
+	padding-top: 48px;
+	@include shadow;
+
+	@include desktop {
+		flex-direction: row;
+	}
+
+	p {
+		text-align: center;
+
+		@include desktop {
+			padding-right: 48px;
+			text-align: left;
+		}
+	}
+
+	// a {
+	// 	background: $cl-tertiary;
+	// 	padding: 16px 48px;
+
+	// 	&:hover {
+	// 		background: darken($cl-tertiary, 8%);
+	// 		padding: 16px 48px;
+	// 	}
+	// }
+
+	&.disabled {
+		opacity: 0;
+		transform: translateY(100%);
+		pointer-events: none;
+	}
+}

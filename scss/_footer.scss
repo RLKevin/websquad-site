@@ -1,0 +1,377 @@
+.footer {
+	$self: &;
+
+	#{$self}__topmenu {
+		background: $cl-black;
+
+		.wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		#{$self}__logo {
+			height: 128px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-right: auto;
+
+			a {
+
+				img {
+					height: auto;
+					max-height: 80px;
+					width: auto;
+					max-width: 200px;
+					position: relative;
+		
+					@include tablet {
+						max-width: 280px;
+					}
+				}
+			}
+		}
+
+		#{$self}__social {
+			display: none;
+
+			@include desktop {
+				display: block;
+			}
+	
+			ul {
+				display: flex;
+				margin: 0 0 0 48px;
+				padding: 0 96px 0 0;
+
+				@include tablet {
+					padding: 0 112px 0 0;
+				}
+	
+				li {
+					margin: 0 8px 0 0;
+	
+					@include tablet {
+						margin: 0 24px 0 0;
+					}
+	
+					&:last-of-type {
+						margin: 0;
+					}
+
+					a {
+						display: block;
+						position: relative;
+						height: 40px;
+						width: 40px;
+						overflow: hidden;
+						padding: 0 0 0 40px;
+						transition: 0.25s all ease-in-out;
+						line-height: 40px;
+						color: $cl-black;
+						white-space: nowrap;
+
+						svg {
+							width: 40px;
+							height: 40px;
+							padding: 12px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							color: $cl-white;
+							transition: 0.25s all ease-in-out;
+						}
+	
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							border: 2px solid $cl-white;
+							transition: 0.25s all ease-in-out;
+							@include square;
+						}
+
+						&:hover {
+							cursor: pointer;
+
+							&::before {
+								border: 2px solid $cl-primary;
+							}
+							
+							svg {
+								color: $cl-primary;
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-button {
+
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	#{$self}__mainmenu {
+		background: $cl-primary;
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#{$self}__social {
+
+			@include desktop {
+				display: none;
+			}
+	
+			ul {
+				display: flex;
+				margin: 48px 0 48px 0;
+	
+				li {
+					margin: 0 8px 0 0;
+	
+					@include tablet {
+						margin: 0 24px 0 0;
+					}
+	
+					&:last-of-type {
+						margin: 0;
+					}
+	
+					a {
+						display: block;
+						position: relative;
+						height: 40px;
+						width: 40px;
+						overflow: hidden;
+						padding: 0 0 0 40px;
+						transition: 0.25s all ease-in-out;
+						line-height: 40px;
+						color: $cl-black;
+						white-space: nowrap;
+	
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 40px;
+							height: 40px;
+							border: 2px solid $cl-white;
+							background-size: 16px 16px;
+							background-repeat: no-repeat;
+							background-position: center;
+							transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+							@include square;
+						}
+	
+						&.facebook {
+	
+							&:before {
+								background-image: url(../img/icons/facebook-f-brands-white.svg);
+							}
+						}
+
+						&.twitter {
+
+							&:before {
+								background-image: url(../img/icons/twitter-brands-white.svg);
+							}
+						}
+
+						&.linkedin {
+
+							&:before {
+								background-image: url(../img/icons/linkedin-in-brands-white.svg);
+							}
+						}
+
+						&.instagram {
+
+							&:before {
+								background-image: url(../img/icons/instagram-brands-white.svg);
+							}
+						}
+
+						&.youtube {
+
+							&:before {
+								background-image: url(../img/icons/youtube-brands-white.svg);
+							}
+						}
+	
+						&:hover {
+	
+							&:before {
+								border: 2px solid $cl-secondary;
+								cursor: pointer;
+							}
+	
+							&.facebook {
+	
+								&:before {
+									background-image: url(../img/icons/facebook-f-brands-primary.svg);
+								}
+							}
+
+							&.twitter {
+	
+								&:before {
+									background-image: url(../img/icons/twitter-brands-primary.svg);
+								}
+							}
+
+							&.linkedin {
+	
+								&:before {
+									background-image: url(../img/icons/linkedin-in-brands-primary.svg);
+								}
+							}
+
+							&.instagram {
+	
+								&:before {
+									background-image: url(../img/icons/instagram-brands-primary.svg);
+								}
+							}
+
+							&.youtube {
+	
+								&:before {
+									background-image: url(../img/icons/youtube-brands-primary.svg);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-button {
+
+				ul {
+					padding: 0 96px 0 0;
+
+					@include tablet {
+						padding: 0 112px 0 0;
+					}
+				}
+			}
+		}
+
+		#{$self}__disclaimer {
+			padding: 0 0 48px 0;
+
+			@include desktop {
+				display: flex;
+				justify-content: center;
+				padding: 48px 0;
+			}
+			
+			ul {
+				position: relative;
+
+				&:not(:last-of-type) {
+					margin: 0 0 48px 0;
+				}
+
+				@include tablet {
+					display: flex;
+					justify-content: center;
+				}
+
+				@include desktop {
+
+					&:not(:last-of-type) {
+						margin: 0 24px 0 0;
+						padding: 0 32px 0 0;
+
+						&:after {
+							content: '';
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							width: 8px;
+							height: 8px;
+							border: 2px solid $cl-white;
+							@include square;
+						}
+					}
+				}
+
+				li {
+					text-align: center;
+					color: $cl-white;
+					
+					@include tablet {
+
+						&:not(:last-of-type) {
+							margin: 0 24px 0 0;
+							padding: 0 32px 0 0;
+							position: relative;
+
+							&:after {
+								content: '';
+								position: absolute;
+								right: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								width: 8px;
+								height: 8px;
+								border: 2px solid $cl-white;
+								@include square;
+							}
+						}
+					}
+
+					a {
+						color: $cl-white;
+					}
+				}
+
+				&.address {
+					
+					li {
+
+						@include tablet {
+
+							&:not(:last-of-type) {
+								margin: 0;
+								padding: 0;
+
+								&:after {
+									content: ', ';
+									white-space: pre;
+									position: relative;
+									right: 0;
+									top: auto;
+									transform: translateY(-50%);
+									width: auto;
+									height: auto;
+									border: 0px;
+									@include square;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

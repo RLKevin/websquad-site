@@ -1,0 +1,82 @@
+//  Switch Reclamebureau
+//	Rendementsweg 2Q
+// 	3641 SK Mijdrecht
+//	0297 - 525580
+
+// reset
+
+	*, html {
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+		-o-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		margin: 0; 
+		padding: 0;
+		outline: none;
+		word-break: break-word;
+		-webkit-tap-highlight-color: transparent;
+
+		&::before,
+		&::after {
+			box-sizing: border-box;
+		}
+  	}
+
+	a, a:visited, a:hover {
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	audio, 
+	canvas, 
+	iframe, 
+	img, 
+	svg, 
+	video { 
+		vertical-align: middle;
+	}
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	select {
+		appearance: none;
+		border: none;
+		border-radius: 0px; 
+	}
+
+	select::-ms-expand { /* for IE 11 */
+		display: none;
+		border: none;
+		border-radius: 0px; 
+	}
+
+	input[type=date]::-webkit-inner-spin-button,
+	input[type=number]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		display: none;
+	}
+
+	::-webkit-input-placeholder,
+	:-moz-placeholder,
+	::-moz-placeholder,
+	:-ms-input-placeholder {  
+		color: #E2E2E2; 
+	}
+
+
+
+
+
+

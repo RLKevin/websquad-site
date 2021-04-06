@@ -1,0 +1,53 @@
+// colors
+
+$cl-black:					#000000;
+$cl-white:					#ffffff;
+$cl-grey:					#eeeeee;
+$cl-primary:				#5F207A;
+$cl-primary-text:			$cl-black;
+$cl-secondary:				#C6006D;
+$cl-secondary-text:			$cl-black;
+$cl-error:					#EA4335;
+				
+// font size						
+				
+$fs-tiny:					12px;
+$fs-small:					16px;
+$fs-medium:					20px;
+$fs-large:					24px;
+$fs-huge:					32px;
+				
+// letter spacing				
+				
+$ls_medium:					0.6px;
+				
+// line-height				
+				
+$lh-small:					1.2;
+$lh-medium: 				1.6;
+$lh-large: 					2.0;
+				
+// font weight						
+				
+$fw-light:					300;
+$fw-regular:				400;
+$fw-medium:					600;
+$fw-bold:					700;
+				
+// font family					
+				
+$ff-primary:				'lexia', serif;
+$ff-secondary:				'Lato', sans-serif;
+
+// border radius
+
+$br-rectangle-top-left:		0px;
+$br-rectangle-top-right:	0px;
+$br-rectangle-bottom-right:	0px;
+$br-rectangle-bottom-left:	0px;
+
+$br-square-top-left:		0px;
+$br-square-top-right:		0px;
+$br-square-bottom-right:	0px;
+$br-square-bottom-left:		0px;
+

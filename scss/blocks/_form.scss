@@ -1,0 +1,234 @@
+.form {
+	$self: &;
+	padding: 96px 0 96px 0;
+
+	.wrapper {
+		max-width: 1120px;
+	}
+
+	&__container {
+
+		@include desktop {
+			display: flex;
+	
+			#{$self}__left {
+				width: calc(50% - 48px);
+				margin: 0 96px 0 0;
+			}
+	
+			#{$self}__right {
+				width: calc(50% - 48px);
+			}
+	
+			#{$self}__textarea {
+	
+				&--1 {
+	
+					textarea {
+						height: calc(64px + (0 * 136px));
+					}
+				}
+	
+				&--2 {
+	
+					textarea {
+						height: calc(64px + (1 * 136px));
+					}
+				}
+	
+				&--3 {
+	
+					textarea {
+						height: calc(64px + (2 * 136px));
+					}
+				}
+	
+				&--4 {
+	
+					textarea {
+						height: calc(64px + (3 * 136px));
+					}
+				}
+	
+				&--5 {
+	
+					textarea {
+						height: calc(64px + (4 * 136px));
+					}
+				}
+	
+				&--6 {
+	
+					textarea {
+						height: calc(64px + (5 * 136px));
+					}
+				}
+	
+				&--7 {
+	
+					textarea {
+						height: calc(64px + (6 * 136px));
+					}
+				}
+	
+				&--8 {
+	
+					textarea {
+						height: calc(64px + (7 * 136px));
+					}
+				}
+			}
+		}
+	}
+
+	// background
+
+	&--white {
+
+		form {
+
+			input,
+			textarea {
+				background: $cl-grey;
+			}
+
+			.gform_body {
+
+				li {
+
+					.ginput_container {
+					
+						&.ginput_container_select {
+							background: $cl-grey;
+						}
+
+						&.ginput_container_checkbox {
+							
+							ul {
+
+								li {
+									background: $cl-grey;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--grey {
+		background: $cl-grey;
+	}
+
+	&--black {
+		background: $cl-black;
+
+		form {
+
+			label,
+			.gfield_description,
+			.validation_error {
+				color: $cl-white;
+			}
+		}	
+	}
+
+	&--primary {
+		background: $cl-primary;
+
+		form {
+
+			.gfield_html,
+			.gfield_html * {
+				color: $cl-primary-text;
+			}
+
+			.gfield_description,
+			.gfield_description * {
+				color: $cl-primary-text;
+			}
+
+			.gfield_label {
+				color: $cl-primary-text;
+			}
+
+			.ginput_container {
+				
+				&.ginput_container_select {
+
+					&::after {
+						background-color: $cl-secondary;
+					}
+
+					&:hover {
+
+						&::after {
+							background-color: darken($cl-secondary, 10%);
+						}
+					}
+				}
+
+				&.ginput_container_checkbox {
+
+					.gfield_checkbox {
+						
+						li {
+
+							input {
+
+								&:checked {
+
+									&::after {
+										background-color: $cl-secondary;
+									}
+								}
+
+								&:hover {
+	
+									&:checked:after {
+										background-color: darken($cl-secondary, 10%);
+									}
+								}
+							}
+						}
+					}
+
+					
+				}
+			}
+
+			.gform_footer {
+				
+				.button {
+					background: $cl-secondary;
+
+					&:hover {
+						background: darken($cl-secondary, 10%);
+					}
+				}
+			}
+		}
+	}
+	
+	&--secondary {
+		background: $cl-secondary;
+
+		form {
+
+			.gfield_html,
+			.gfield_html * {
+				color: $cl-secondary-text;
+			}
+
+			.gfield_description,
+			.gfield_description * {
+				color: $cl-secondary-text;
+			}
+
+			.gfield_label {
+				color: $cl-secondary-text;
+			}
+		}
+	}
+}
