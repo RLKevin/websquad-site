@@ -540,16 +540,16 @@ jQuery(document).ready(function( $ ) {
 
 		// execute - when loaded
 		
-		$(window).on("load", function () {
-
-			windowWith = $( window ).width();
-
-			show_menu();
-			scroll_scroll_button();
-			set_slider();
-			dot_dot_dot();
-				
-		});
+		$(window).ready(function() {
+ 
+            windowWith = $( window ).width();
+ 
+            show_menu();
+            scroll_scroll_button();
+            set_slider();
+            dot_dot_dot();
+ 
+        });
 
 		// execute - when scroll
 
