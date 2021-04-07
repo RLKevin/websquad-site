@@ -19,14 +19,17 @@
 		}
 
 	// add scripts
+
 	
-		add_action( 'wp_enqueue_scripts', 'switchreclamebureau_adding_scripts', 999 );	
-		function switchreclamebureau_adding_scripts() {
+	add_action( 'wp_enqueue_scripts', 'switchreclamebureau_adding_scripts', 999 );	
+	function switchreclamebureau_adding_scripts() {
+			$maps_api_key = get_field('options_maps_key', 'options');
+			// $maps_api_key = 'AIzaSyDWoSM3uHPncI05dg05dAN1GGsRC80BOxE';
 			wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), filemtime(get_stylesheet_directory() . '/js/main.js'));
 			wp_enqueue_script('owl', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/owl.carousel.min.js'));
 			wp_enqueue_script('dotdotdot', get_template_directory_uri() . '/js/vendor/dotdotdot.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/dotdotdot.js'));
 			wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js'));
-			wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDWoSM3uHPncI05dg05dAN1GGsRC80BOxE');
+			wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key='.$maps_api_key);
 			wp_enqueue_script('google-maps-settings', get_template_directory_uri() . '/js/vendor/google-maps-settings.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/google-maps-settings.js'));
 		}
 
