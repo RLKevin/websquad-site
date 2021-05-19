@@ -1,9 +1,8 @@
 <?php
 
 	// import options page fields into acf
-	add_action('acf/init', function(){ 
-		include 'acf-fields.php';
-	});
+	// add_action('acf/init', function(){ 
+	// });
 
 	// generate variables.scss
 
@@ -52,6 +51,10 @@
 
 		add_action('acf/init', 'my_acf_init');
 		function my_acf_init() {
+
+			// import option fields
+
+			include 'acf-fields.php';
 
 			// acf - gutenberg full width
 
