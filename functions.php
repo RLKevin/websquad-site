@@ -1,6 +1,6 @@
 <?php
 
-	include('./acf-fields.php')
+	include('acf-fields.php')
 
 	// generate variables.scss
 
