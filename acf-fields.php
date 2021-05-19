@@ -1,5 +1,5 @@
 <?php
-
+        echo 'importing acf fields into options page...';
         acf_add_local_field_group(array(
             'key' => 'group_5c2c7fd438dfe',
             'title' => 'Options',
