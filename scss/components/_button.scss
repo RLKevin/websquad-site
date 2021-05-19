@@ -26,8 +26,9 @@
 	@include tablet {
 		padding: 16px 40px;
 	}
-	
+
 	&:hover {
+		animation: $preferred-animation 0.5s 1;
 		cursor: pointer;
 		background: darken($cl-primary, 10%);
 	}
@@ -47,5 +48,3 @@
 	// 	}
 	// }
 }
-
-

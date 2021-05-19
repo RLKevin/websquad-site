@@ -5,330 +5,365 @@
 
 // variables
 
-	@import 'assets/variables.scss';
+@import "assets/variables.scss";
 
 // mixin
 
-	// padding
+// padding
 
-		@mixin padding {
-			padding-left: 16px;
-			padding-right: 16px;
+@mixin padding {
+	padding-left: 16px;
+	padding-right: 16px;
 
-			@media only screen and (min-width: 640px) {
-				padding-left: 48px;
-				padding-right: 48px;
-			}
+	@media only screen and (min-width: 640px) {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
 
-			@media only screen and (min-width: 1280px) {
-				padding-left: 96px;
-				padding-right: 96px;
-			}
-		}
+	@media only screen and (min-width: 1280px) {
+		padding-left: 96px;
+		padding-right: 96px;
+	}
+}
 
-	// border radius
+// border radius
 
-		@mixin square {
-			border-radius: $br-square-top-left $br-square-top-right $br-square-bottom-right $br-square-bottom-left;
-		}
+@mixin square {
+	border-radius: $br-square-top-left $br-square-top-right
+		$br-square-bottom-right $br-square-bottom-left;
+}
 
-		@mixin rectangle {
-			border-radius: $br-rectangle-top-left $br-rectangle-top-right $br-rectangle-bottom-right $br-rectangle-bottom-left;
-		}
+@mixin rectangle {
+	border-radius: $br-rectangle-top-left $br-rectangle-top-right
+		$br-rectangle-bottom-right $br-rectangle-bottom-left;
+}
 
-	// shadow
+// shadow
 
-		@mixin shadow {
-			box-shadow: 0px 0px 16px 0px rgba($cl-black, 0.16);
-		}
+@mixin shadow {
+	box-shadow: 0px 0px 16px 0px rgba($cl-black, 0.16);
+}
 
-	// mediaquerie
+// mediaquerie
 
-		@mixin tablet {
-			@media only screen and (min-width: 640px) {
-				@content;
-			}
-		}
+@mixin tablet {
+	@media only screen and (min-width: 640px) {
+		@content;
+	}
+}
 
-		@mixin desktop {
-			@media only screen and (min-width: 1280px) {
-				@content;
-			}
-		}
+@mixin desktop {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
 
-		@mixin custom($size) {
-			@media only screen and (min-width: $size) {
-				@content;
-			}
-		}
+@mixin custom($size) {
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+// variable - keyframes
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	30% {
+		transform: rotate(-10deg);
+	}
+
+	70% {
+		transform: rotate(10deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
 
 // imports
 
-	// assets
+// assets
 
-		@import 'assets/reset.scss';
-		@import 'assets/owl-carousel';
-		@import 'assets/animations';
+@import "assets/reset.scss";
+@import "assets/owl-carousel";
+@import "assets/animations";
 
-	// elements
+// elements
 
-		@import 'components/button.scss';
-		@import 'components/cookie.scss';
-		@import 'components/form.scss';
-		@import 'components/slider.scss';
+@import "components/button.scss";
+@import "components/cookie.scss";
+@import "components/form.scss";
+@import "components/slider.scss";
 
 // body
 
-	html {
-		background: $cl-secondary;
-	}
+html {
+	background: $cl-secondary;
+}
 
-	html, body {	
-		width: 100%;
-		overflow-x: hidden;
-	}
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
 
-	body {
-		font-family: $ff-secondary;
-		font-size: $fs-small;
-		line-height: $lh-large;
-		font-weight: $fw-regular;
-		color: $cl-black;
-		letter-spacing: $ls_medium;
-		background: $cl-white;
-	}
+body {
+	font-family: $ff-secondary;
+	font-size: $fs-small;
+	line-height: $lh-large;
+	font-weight: $fw-regular;
+	color: $cl-black;
+	letter-spacing: $ls_medium;
+	background: $cl-white;
+}
 
 // wrapper
 
-	.wrapper {
-		width: 100%;
-		margin: 0 auto;
-		padding: 0 16px;
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 16px;
 
-		@include tablet {
-			padding: 0 48px;
-		}
-
-		@include desktop {
-			padding: 0 96px;
-		}
+	@include tablet {
+		padding: 0 48px;
 	}
 
-// content		
+	@include desktop {
+		padding: 0 96px;
+	}
+}
 
-	// titles
+// content
 
-		h1, h2 {
-			color: $cl-black;
-			font-size: $fs-large;
-			line-height: $lh-small;
-			font-family: $ff-primary;
-			font-weight: $fw-bold;
-			padding: 0 0 48px 0;
+// titles
 
-			@include tablet {
-				font-size: $fs-huge;
-			}
-		}
+h1,
+h2 {
+	color: $cl-black;
+	font-size: $fs-large;
+	line-height: $lh-small;
+	font-family: $ff-primary;
+	font-weight: $fw-bold;
+	padding: 0 0 48px 0;
 
-		h3 {
-			color: $cl-primary;
-			font-size: $fs-medium;
-			line-height: $lh-medium;
-			font-family: $ff-primary;
-			font-weight: $fw-medium;
-			padding: 0 0 48px 0;
-			position: relative;
-			z-index: 1;
+	@include tablet {
+		font-size: $fs-huge;
+	}
+}
 
-			@include tablet {
-				font-size: $fs-large;
-			}
-		}
+h3 {
+	color: $cl-primary;
+	font-size: $fs-medium;
+	line-height: $lh-medium;
+	font-family: $ff-primary;
+	font-weight: $fw-medium;
+	padding: 0 0 48px 0;
+	position: relative;
+	z-index: 1;
 
-	// link
+	@include tablet {
+		font-size: $fs-large;
+	}
+}
 
-		a {
-					
-			&,	
-			&:visited,
-			&:active,
-			&:focus {
-				color: $cl-primary;
-				transition: all 0.25s ease-in-out;
-			}
+// link
 
-			&:hover {
-				color: darken($cl-primary, 10%);
-			}
-		}
+a {
+	&,
+	&:visited,
+	&:active,
+	&:focus {
+		color: $cl-primary;
+		transition: all 0.25s ease-in-out;
+	}
 
-	// paragraph
+	&:hover {
+		color: darken($cl-primary, 10%);
+	}
+}
 
-		p {
-			padding: 0 0 48px 0;
-			
-			&.dotdotdot {
-				opacity: 0;
-				transition: all 0.25s ease-in-out;
-		
-				&.loaded {
-					opacity: 1;
-				}
-			}
-		}
+// paragraph
 
-	// quote
+p {
+	padding: 0 0 48px 0;
 
-		blockquote {
-			position: relative;
-			color: $cl-primary;
-			font-style: italic;
-			border-left: 2px solid $cl-primary;
-			margin: 0 0 48px 0;
-			padding: 48px 0 0 16px;
-
-			p {
-				position: relative;
-			}
-
-			@include tablet {
-				padding: 48px 0 0 48px;
-			}
-
-			@include desktop {
-				padding: 48px 0 0 96px;
-			}
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 128px;
-				height: 128px;
-				background-image: url(../img/icons/quote-right-solid-secondary.svg);
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-				background-position: center;
-				pointer-events: none;
-				opacity: 0.16;
-			}
-		}
-
-	// image 
-
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-	// strong
-
-		strong {
-			font-weight: $fw-bold;
-			color: $cl-secondary;
-		}
-
-	// italic
-
-		em {
-			color: darken($cl-grey, 50%);
-		}
-
-	// wysiwyg
-
-		.wysiwyg {
-
-			ul {
-				padding: 0 0 48px 0;
-		
-				li {
-					padding: 0 0 4px 24px;
-					position: relative;
-		
-					&:last-of-type {
-						padding: 0 0 0 24px;
-					}
-
-					&:before {
-						content: '\25E6';
-						position: absolute;
-						left: 0;
-						font-weight: $fw-bold;
-						color: $cl-primary;
-					}
-
-					a {
-						
-						&,	
-						&:visited,
-						&:active,
-						&:focus {
-							color: $cl-primary;
-							transition: all 0.25s ease-in-out;
-						}
-
-						&:hover {
-							color: darken($cl-primary, 10%);
-						}
-					}
-				}
-			}
-		}
-
-// loading
-	
-	.loading {
+	&.dotdotdot {
 		opacity: 0;
 		transition: all 0.25s ease-in-out;
 
-		&.page-loaded {
+		&.loaded {
 			opacity: 1;
 		}
 	}
+}
+
+// quote
+
+blockquote {
+	position: relative;
+	color: $cl-primary;
+	font-style: italic;
+	border-left: 2px solid $cl-primary;
+	margin: 0 0 48px 0;
+	padding: 48px 0 0 16px;
+
+	p {
+		position: relative;
+	}
+
+	@include tablet {
+		padding: 48px 0 0 48px;
+	}
+
+	@include desktop {
+		padding: 48px 0 0 96px;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 128px;
+		height: 128px;
+		background-image: url(../img/icons/quote-right-solid-secondary.svg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		pointer-events: none;
+		opacity: 0.16;
+	}
+}
+
+// image
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+// strong
+
+strong {
+	font-weight: $fw-bold;
+	color: $cl-secondary;
+}
+
+// italic
+
+em {
+	color: darken($cl-grey, 50%);
+}
+
+// wysiwyg
+
+.wysiwyg {
+	ul {
+		padding: 0 0 48px 0;
+
+		li {
+			padding: 0 0 4px 24px;
+			position: relative;
+
+			&:last-of-type {
+				padding: 0 0 0 24px;
+			}
+
+			&:before {
+				content: "\25E6";
+				position: absolute;
+				left: 0;
+				font-weight: $fw-bold;
+				color: $cl-primary;
+			}
+
+			a {
+				&,
+				&:visited,
+				&:active,
+				&:focus {
+					color: $cl-primary;
+					transition: all 0.25s ease-in-out;
+				}
+
+				&:hover {
+					color: darken($cl-primary, 10%);
+				}
+			}
+		}
+	}
+}
+
+// loading
+
+.loading {
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+
+	&.page-loaded {
+		opacity: 1;
+	}
+}
 
 // placeholder
 
-	::placeholder {
-		color: darken($cl-grey, 20%);
-		opacity: 1;
-	}
+::placeholder {
+	color: darken($cl-grey, 20%);
+	opacity: 1;
+}
 
 // selection
 
-	::selection {
-		background: darken($cl-grey, 10%);
-		text-shadow: none;
-	}
+::selection {
+	background: darken($cl-grey, 10%);
+	text-shadow: none;
+}
 
-// autofill 
+// autofill
 
-	input:-webkit-autofill,
-	input:-webkit-autofill:hover,
-	input:-webkit-autofill:focus,
-	input:-webkit-autofill:active {
-		transition: background-color 5000s ease-in-out 0s;
-	}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+}
 
 // imports - general
 
-	@import 'header';
-	@import 'footer';
-	
+@import "header";
+@import "footer";
+
 // imports - blocks
-		
-	@import 'blocks/card';
-	@import 'blocks/content';
-	@import 'blocks/faq';
-	@import 'blocks/form';
-	@import 'blocks/gallery';
-	@import 'blocks/hero';
-	@import 'blocks/intro';
-	@import 'blocks/map';
-	@import 'blocks/open';
-	@import 'blocks/reference';
-	@import 'blocks/search';
-	@import 'blocks/spacer';
-	@import 'blocks/table';
-	@import 'blocks/usp';
+
+@import "blocks/card";
+@import "blocks/content";
+@import "blocks/faq";
+@import "blocks/form";
+@import "blocks/gallery";
+@import "blocks/hero";
+@import "blocks/intro";
+@import "blocks/map";
+@import "blocks/open";
+@import "blocks/reference";
+@import "blocks/search";
+@import "blocks/spacer";
+@import "blocks/table";
+@import "blocks/usp";

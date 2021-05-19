@@ -1,4 +1,29 @@
 @charset "UTF-8";
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 *, html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -3834,6 +3859,7 @@ input[type=date]::-webkit-inner-spin-button, input[type=number]::-webkit-inner-s
   }
 }
 .button:hover {
+  animation: pulse 0.5s 1;
   cursor: pointer;
   background: #401552;
 }
@@ -4308,7 +4334,7 @@ blockquote p {
   }
 }
 blockquote:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -4343,7 +4369,7 @@ em {
   padding: 0 0 0 24px;
 }
 .wysiwyg ul li:before {
-  content: '\25E6';
+  content: "\25E6";
   position: absolute;
   left: 0;
   font-weight: 700;

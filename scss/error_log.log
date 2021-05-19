@@ -43,3 +43,4 @@ Call Stack:
 02/19/21 1:52:56: style.scss - Undefined variable $br-rectangle-top-left: /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/style.scss on line 23, at column 4
 Call Stack:
 #0 mixin rectangle /Users/markhaveman/OneDrive - Switch Reclamebureau/clients/websquad/websquad-nl/wp-content/themes/websquad/scss/components/_button.scss on line 20
+05/19/21 7:36:37: style.scss - Undefined variable $preffered-animation: /Users/kevinvannieukerke/www/websquad/wp-content/themes/websquad-site/scss/components/_button.scss on line 31, at column 3

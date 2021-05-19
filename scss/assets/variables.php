@@ -51,3 +51,6 @@ $br-square-top-right:		<?= get_field('br_square_top_right', 'option') 			? get_f
 $br-square-bottom-right:	<?= get_field('br_square_bottom_right', 'option') 		? get_field('br_square_bottom_right', 'option') 	: '0'; ?>px;
 $br-square-bottom-left:		<?= get_field('br_square_bottom_left', 'option') 		? get_field('br_square_bottom_left', 'option') 	: '0'; ?>px;
 
+// animation
+
+$preferred-animation:       <?= get_field('animation', 'option')                    ? get_field('animation', 'option')              : 'none'; ?>;
