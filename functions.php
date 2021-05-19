@@ -1,6 +1,9 @@
 <?php
 
-	include 'acf-fields.php';
+	// import options page fields into acf
+	add_action('acf/init', function(){ 
+		include 'acf-fields.php';
+	});
 
 	// generate variables.scss
 
