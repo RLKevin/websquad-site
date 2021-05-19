@@ -1,5 +1,7 @@
 <?php
 
+	include('./acf-fields.php')
+
 	// generate variables.scss
 
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
