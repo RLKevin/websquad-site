@@ -1,4 +1,12 @@
 <?php
+
+    $dev = false;
+    if ( $_SERVER['SERVER_ADDR'] == 'localhost' ) {
+        $dev = true;
+    }
+
+    if (!$dev) {
+
         if( function_exists('acf_add_local_field_group') ):
 
             acf_add_local_field_group(array(
@@ -1244,25 +1252,6 @@
                         'ajax' => 0,
                         'placeholder' => '',
                     ),
-                    array(
-                        'key' => 'field_60a4de4f87c2c',
-                        'label' => 'test',
-                        'name' => 'test',
-                        'type' => 'text',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'default_value' => '',
-                        'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
-                        'maxlength' => '',
-                    ),
                 ),
                 'location' => array(
                     array(
@@ -1284,5 +1273,7 @@
             ));
             
             endif;
+        
+    }
 
 ?>

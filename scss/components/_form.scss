@@ -35,6 +35,19 @@ button {
 	padding: 0;
 }
 
+.gform_wrapper {
+ 
+    .gform_validation_errors {
+ 
+        .validation_error {
+            padding: 16px 0 16px 16px;
+            border-left: 2px solid $cl-error;
+            margin-bottom: 48px;
+            color: $cl-error;
+        }
+    }
+}
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -63,20 +76,6 @@ form {
 		margin-bottom: 24px;
 		padding: 0;
 		-webkit-appearance: none;
-	}
-
-	.validation_error {
-		position: relative;
-		padding: 16px 0 16px 16px;
-		margin: 0 0 48px 0;
-		border-left: 2px solid $cl-error;
-		order: 2;
-
-		@include desktop {
-			position: absolute;
-			bottom: 0;
-			margin: 0;
-		}
 	}
 
 	.gform_body {
