@@ -6176,7 +6176,7 @@ input:-webkit-autofill:active {
 }
 
 .card__image--video a:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
@@ -6297,7 +6297,7 @@ input:-webkit-autofill:active {
     margin: 0 0 96px 96px;
     width: calc(50% - 48px);
   }
-  .card--basic .card__item:nth-of-type(2n+1) {
+  .card--basic .card__item:nth-of-type(2n + 1) {
     margin: 0 0 96px 0;
   }
 }
@@ -6306,10 +6306,10 @@ input:-webkit-autofill:active {
   .card--basic .card__item {
     width: calc(25% - 72px);
   }
-  .card--basic .card__item:nth-of-type(2n+1) {
+  .card--basic .card__item:nth-of-type(2n + 1) {
     margin: 0 0 96px 96px;
   }
-  .card--basic .card__item:nth-of-type(4n+1) {
+  .card--basic .card__item:nth-of-type(4n + 1) {
     margin: 0 0 96px 0;
   }
 }
@@ -6334,7 +6334,11 @@ input:-webkit-autofill:active {
   background: #eeeeee;
 }
 
-.card--mixed h2, .card--mixed h3, .card--mixed p, .card--mixed li, .card--mixed em {
+.card--mixed h2,
+.card--mixed h3,
+.card--mixed p,
+.card--mixed li,
+.card--mixed em {
   color: #ffffff;
 }
 
@@ -6342,11 +6346,13 @@ input:-webkit-autofill:active {
   color: #ffffff;
 }
 
-.card--mixed p a, .card--mixed li a {
+.card--mixed p a,
+.card--mixed li a {
   color: #ffffff;
 }
 
-.card--mixed p a:hover, .card--mixed li a:hover {
+.card--mixed p a:hover,
+.card--mixed li a:hover {
   color: black;
 }
 
@@ -6362,27 +6368,27 @@ input:-webkit-autofill:active {
   background-image: url(../img/icons/quote-right-solid-primary.svg);
 }
 
-.card--mixed .card__item:nth-child(6n+1) {
+.card--mixed .card__item:nth-child(6n + 1) {
   background: #C6006D;
 }
 
-.card--mixed .card__item:nth-child(6n+2) {
+.card--mixed .card__item:nth-child(6n + 2) {
   background: #ce3087;
 }
 
-.card--mixed .card__item:nth-child(6n+3) {
+.card--mixed .card__item:nth-child(6n + 3) {
   background: #5F207A;
 }
 
-.card--mixed .card__item:nth-child(6n+4) {
+.card--mixed .card__item:nth-child(6n + 4) {
   background: #7c4991;
 }
 
-.card--mixed .card__item:nth-child(6n+5) {
+.card--mixed .card__item:nth-child(6n + 5) {
   background: #000000;
 }
 
-.card--mixed .card__item:nth-child(6n+6) {
+.card--mixed .card__item:nth-child(6n + 6) {
   background: #303030;
 }
 
@@ -6456,11 +6462,6 @@ input:-webkit-autofill:active {
   transition: 0.25s all ease-in-out;
 }
 
-.card--full .card__image a:hover img {
-  -webkit-transform: scale(1.6) translateY(-31.25%);
-          transform: scale(1.6) translateY(-31.25%);
-}
-
 .card--round .card__image {
   padding: 96px 0 0 0;
   display: -webkit-box;
@@ -6485,11 +6486,6 @@ input:-webkit-autofill:active {
   position: relative;
   -webkit-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
-}
-
-.card--round .card__image a:hover img {
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
 }
 
 .content {

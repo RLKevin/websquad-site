@@ -23,14 +23,12 @@
 	}
 
 	&__image {
-
 		&--video {
-
 			a {
 				position: relative;
 
 				&:after {
-					content: '';
+					content: "";
 					position: absolute;
 					left: 50%;
 					top: 50%;
@@ -45,11 +43,10 @@
 					background-repeat: no-repeat;
 					background-position: 24px center;
 					pointer-events: none;
-					@include square;		
+					@include square;
 				}
 
 				&:hover {
-
 					&:after {
 						background-color: darken($cl-primary, 10%);
 					}
@@ -79,7 +76,6 @@
 		padding: 0 0 48px 0;
 
 		.button {
-
 			&--disabled {
 				background: $cl-black;
 
@@ -114,13 +110,11 @@
 		background: $cl-black;
 
 		#{$self}__load-more {
-
 			.button {
-
 				&--disabled {
 					background: $cl-white;
 					color: $cl-black;
-	
+
 					&:hover {
 						background: darken($cl-white, 10%);
 					}
@@ -137,12 +131,10 @@
 		background: $cl-primary;
 
 		#{$self}__load-more {
-
 			.button {
-
 				&--filled-secondary {
 					background: $cl-secondary;
-	
+
 					&:hover {
 						background: darken($cl-secondary, 10%);
 					}
@@ -150,7 +142,7 @@
 
 				&--disabled {
 					background: $cl-black;
-	
+
 					&:hover {
 						background: darken($cl-black, 10%);
 					}
@@ -169,12 +161,12 @@
 			margin: 0 0 96px 0;
 			overflow: hidden;
 			@include rectangle;
-	
+
 			@include desktop {
 				margin: 0 0 96px 96px;
 				width: calc(50% - 48px);
 
-				&:nth-of-type(2n+1) {
+				&:nth-of-type(2n + 1) {
 					margin: 0 0 96px 0;
 				}
 			}
@@ -182,11 +174,11 @@
 			@include custom(1920px) {
 				width: calc(25% - 72px);
 
-				&:nth-of-type(2n+1) {
+				&:nth-of-type(2n + 1) {
 					margin: 0 0 96px 96px;
 				}
 
-				&:nth-of-type(4n+1) {
+				&:nth-of-type(4n + 1) {
 					margin: 0 0 96px 0;
 				}
 			}
@@ -205,7 +197,6 @@
 		}
 
 		&#{$self}--white {
-
 			#{$self}__item {
 				background: $cl-grey;
 			}
@@ -213,8 +204,11 @@
 	}
 
 	&--mixed {
-
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: $cl-white;
 		}
 
@@ -222,7 +216,8 @@
 			color: $cl-white;
 		}
 
-		p a, li a {
+		p a,
+		li a {
 			color: $cl-white;
 
 			&:hover {
@@ -231,9 +226,7 @@
 		}
 
 		ul {
-			
 			li {
-
 				&:before {
 					color: $cl-secondary;
 				}
@@ -249,48 +242,45 @@
 		}
 
 		#{$self}__item {
-
-			&:nth-child(6n+1) {
-				background: $cl-secondary; 
+			&:nth-child(6n + 1) {
+				background: $cl-secondary;
 			}
 
-			&:nth-child(6n+2) { 
+			&:nth-child(6n + 2) {
 				background: mix($cl-secondary, $cl-grey, 80%);
 			}
 
-			&:nth-child(6n+3) { 
-				background: $cl-primary; 
+			&:nth-child(6n + 3) {
+				background: $cl-primary;
 			}
 
-			&:nth-child(6n+4) { 
+			&:nth-child(6n + 4) {
 				background: mix($cl-primary, $cl-grey, 80%);
 			}
 
-			&:nth-child(6n+5) { 
-				background: $cl-black; 
+			&:nth-child(6n + 5) {
+				background: $cl-black;
 			}
 
-			&:nth-child(6n+6) { 
+			&:nth-child(6n + 6) {
 				background: mix($cl-black, $cl-grey, 80%);
 			}
 		}
 
 		#{$self}__text {
-
 			@include desktop {
 				padding: 96px 96px 0 96px;
 			}
 		}
 
 		#{$self}__button {
-
 			.button {
 				border: 2px solid $cl-white;
 
 				// &--filled-secondary {
 				// 	background: $cl-white;
 				// 	color: $cl-black;
-	
+
 				// 	&:hover {
 				// 		background: darken($cl-white, 10%);
 				// 	}
@@ -310,7 +300,6 @@
 	// image
 
 	&--icon {
-		
 		#{$self}__image {
 			padding: 96px 0 0 0;
 			display: flex;
@@ -335,9 +324,7 @@
 	}
 
 	&--full {
-
 		#{$self}__image {
-
 			a {
 				display: block;
 				position: relative;
@@ -353,9 +340,8 @@
 				}
 
 				&:hover {
-					
 					img {
-						transform: scale(1.6) translateY(-31.25%);
+						// transform: scale(1.6) translateY(-31.25%);
 					}
 				}
 			}
@@ -363,7 +349,6 @@
 	}
 
 	&--round {
-		
 		#{$self}__image {
 			padding: 96px 0 0 0;
 			display: flex;
@@ -384,9 +369,8 @@
 				}
 
 				&:hover {
-					
 					img {
-						transform: scale(1.6);
+						// transform: scale(1.6);
 					}
 				}
 			}
