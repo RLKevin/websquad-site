@@ -7,6 +7,7 @@
 	// generate variables.scss
 
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
+		add_action( 'after_setup_theme', 'generate_options_css', 20 );
 		function generate_variables_scss($post_id) {
 
 			if ($post_id == 'options') {
