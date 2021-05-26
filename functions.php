@@ -8,6 +8,10 @@
 
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
 		add_action( 'after_setup_theme', 'generate_options_css', 20 );
+		function PREFIX_check_theme_version() {
+			generate_options_css();
+		}
+
 		function generate_variables_scss($post_id) {
 
 			if ($post_id == 'options') {
