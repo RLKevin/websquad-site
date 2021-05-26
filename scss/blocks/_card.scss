@@ -359,11 +359,12 @@
 	&.three {
 		.card__container {
 			grid-template-columns: repeat(1, 1fr);
-			@include desktop {
-				grid-template-columns: repeat(3, 1fr);
-			}
 
 			@include desktop {
+				grid-template-columns: repeat(1, 1fr);
+			}
+
+			@include custom(1200px) {
 				grid-template-columns: repeat(3, 1fr);
 			}
 		}
