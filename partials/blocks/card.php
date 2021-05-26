@@ -14,11 +14,12 @@ function render_block_card() {
 	$background = get_field('background');
 	$color = get_field('color');
 	$id = get_field('id');
+	$classes = get_field('classes');
 	$image = get_field('image');
 
 	?>
 
-	<div id="<?php echo $id; ?>" class="card card--<?php echo $align; ?> card--<?php echo $background; ?> card--<?php echo $color; ?> card--<?php echo $image; ?>">
+	<div id="<?= $id; ?>" class="card card--<?= $align; ?> card--<?= $background; ?> card--<?= $color; ?> card--<?= $image; ?> <?= $classes; ?>">
 
 	<?php
 
@@ -52,9 +53,9 @@ function render_block_card() {
 
 									<div class="card__image">
 
-										<a <?php if ($button): ?>href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"<?php endif; ?>>
+										<a <?php if ($button): ?>href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"<?php endif; ?>>
 
-											<img src="<?php echo $image['sizes']['960-1-1']; ?>" alt="<?php echo $image['title']; ?>">
+											<img src="<?= $image['sizes']['960-1-1']; ?>" alt="<?= $image['title']; ?>">
 										
 										</a>
 
@@ -66,7 +67,7 @@ function render_block_card() {
 
 									<div class="card__text wysiwyg">
 
-										<?php echo $text; ?>
+										<?= $text; ?>
 
 									</div>
 
@@ -76,7 +77,7 @@ function render_block_card() {
 
 									<div class="card__button">
 
-										<a class="button button--filled-secondary" href="<?php echo $button['url']; ?>" target="<?php echo $button['target']; ?>"><?php echo $button['title']; ?></a>
+										<a class="button button--filled-secondary" href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"><?= $button['title']; ?></a>
 
 									</div>
 
@@ -138,9 +139,9 @@ function render_block_card() {
 
 								<div class="card__image">
 
-									<a href="<?php echo $button; ?>">
+									<a href="<?= $button; ?>">
 
-										<img src="<?php echo $image; ?>" alt="<?php echo $text; ?>">
+										<img src="<?= $image; ?>" alt="<?= $text; ?>">
 									
 									</a>
 
@@ -152,7 +153,7 @@ function render_block_card() {
 
 								<div class="card__text">
 
-									<h2><?php echo $text; ?></h2>
+									<h2><?= $text; ?></h2>
 
 								</div>
 
@@ -162,7 +163,7 @@ function render_block_card() {
 
 								<div class="card__button">
 
-									<a class="button button--filled-secondary" href="<?php echo $button; ?>">Bekijk</a>
+									<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
 
 								</div>
 
@@ -212,12 +213,12 @@ function render_block_card() {
 
 				<div class="card__container" 
 					
-					data-post-type="<?php echo $post_type; ?>"
-					data-post-per-page="<?php echo $post_per_page; ?>"
-					data-post-max-pages="<?php echo $post_max_pages; ?>"
-					data-post-text-more="<?php echo $post_text_more; ?>"
-					data-post-text-loading="<?php echo $post_text_loading; ?>"
-					data-post-text-done="<?php echo $post_text_done; ?>"
+					data-post-type="<?= $post_type; ?>"
+					data-post-per-page="<?= $post_per_page; ?>"
+					data-post-max-pages="<?= $post_max_pages; ?>"
+					data-post-text-more="<?= $post_text_more; ?>"
+					data-post-text-loading="<?= $post_text_loading; ?>"
+					data-post-text-done="<?= $post_text_done; ?>"
 				
 				>
 
@@ -266,9 +267,9 @@ function render_block_card() {
 
 								<div class="card__image <?php if ($type == 'video'): ?>card__image--video<?php endif; ?>">
 
-									<a href="<?php echo $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>
+									<a href="<?= $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>
 
-										<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+										<img src="<?= $image; ?>" alt="<?= $title; ?>">
 									
 									</a>
 
@@ -280,15 +281,15 @@ function render_block_card() {
 
 								<div class="card__text">
 
-									<h2><?php echo $title; ?></h2>
+									<h2><?= $title; ?></h2>
 
 									<?php if ($post_type == 'projects'): ?>
 
-										<h3><?php echo $date; ?></h3>
+										<h3><?= $date; ?></h3>
 										
 									<?php endif; ?>
 
-									<p><?php echo $text; ?></p>
+									<p><?= $text; ?></p>
 
 								</div>
 
@@ -298,7 +299,7 @@ function render_block_card() {
 
 								<div class="card__button">
 
-									<a class="button button--filled-secondary" href="<?php echo $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>Bekijk</a>
+									<a class="button button--filled-secondary" href="<?= $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>Bekijk</a>
 
 								</div>
 
@@ -322,7 +323,7 @@ function render_block_card() {
 
 					<div class="card__load-more">
 
-						<button class="button button--filled-secondary <?php echo ($post_max_pages == 1) ? 'button--disabled' : '' ; ?>" <?php echo ($post_max_pages == 1) ? 'disabled' : '' ; ?>><?php echo ($post_max_pages == 1) ? $post_text_done : $post_text_more ; ?></button>
+						<button class="button button--filled-secondary <?= ($post_max_pages == 1) ? 'button--disabled' : '' ; ?>" <?= ($post_max_pages == 1) ? 'disabled' : '' ; ?>><?= ($post_max_pages == 1) ? $post_text_done : $post_text_more ; ?></button>
 
 					</div>
 

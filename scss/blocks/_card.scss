@@ -376,4 +376,17 @@
 			}
 		}
 	}
+
+	&.three {
+		.card__item {
+	
+			@include desktop {
+				width: calc(100% / 3);
+			}
+	
+			@include custom(1920px) {
+				width: calc(100% / 3);
+			}
+		}
+	}
 }

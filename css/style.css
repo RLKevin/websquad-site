@@ -6488,6 +6488,18 @@ input:-webkit-autofill:active {
   transition: 0.25s all ease-in-out;
 }
 
+@media only screen and (min-width: 1280px) {
+  .card.three .card__item {
+    width: calc(100% / 3);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .card.three .card__item {
+    width: calc(100% / 3);
+  }
+}
+
 .content {
   padding: 96px 0 48px 0;
 }
