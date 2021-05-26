@@ -14,7 +14,7 @@
 			
 			if ($old_version !== $current_version) {
 				// do some cool stuff
-				create_css_file();
+				generate_variables_scss('20');
 				
 				// update not to run twice
 				update_option('PREFIX_theme_version', $current_version);
