@@ -7,7 +7,7 @@
 	// generate variables.scss
 
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
-		add_action( 'after_setup_theme', 'generate_options_css', 20 );
+		add_action( 'after_setup_theme', 'generate_options_css' );
 		function PREFIX_check_theme_version() {
 			generate_options_css();
 		}
