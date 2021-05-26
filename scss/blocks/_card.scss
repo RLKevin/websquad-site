@@ -1,9 +1,17 @@
 .card {
 	$self: &;
 
-	&__container {
-		display: flex;
-		flex-wrap: wrap;
+	#{$self}__container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+
+		@include desktop {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include custom(1920px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 
 	&__item {
@@ -12,14 +20,6 @@
 		padding: 0 0 48px 0;
 		transition: 0.25s all ease-in-out;
 		width: 100%;
-
-		@include desktop {
-			width: 50%;
-		}
-
-		@include custom(1920px) {
-			width: 25%;
-		}
 	}
 
 	&__image {
@@ -154,45 +154,24 @@
 	// color
 
 	&--basic {
-		padding: 96px 0 0 0;
-
 		#{$self}__item {
 			background: $cl-white;
-			margin: 0 0 96px 0;
 			overflow: hidden;
 			@include rectangle;
-
-			@include desktop {
-				margin: 0 0 96px 96px;
-				width: calc(50% - 48px);
-
-				&:nth-of-type(2n + 1) {
-					margin: 0 0 96px 0;
-				}
-			}
-
-			@include custom(1920px) {
-				width: calc(25% - 72px);
-
-				&:nth-of-type(2n + 1) {
-					margin: 0 0 96px 96px;
-				}
-
-				&:nth-of-type(4n + 1) {
-					margin: 0 0 96px 0;
-				}
-			}
+			width: 100%;
 		}
 
 		#{$self}__container {
-			padding: 0 16px;
-
+			gap: 16px;
+			padding: 16px;
 			@include tablet {
-				padding: 0 48px;
+				gap: 48px;
+				padding: 48px;
 			}
 
 			@include desktop {
-				padding: 0 96px;
+				gap: 96px;
+				padding: 96px;
 			}
 		}
 
@@ -378,14 +357,14 @@
 	}
 
 	&.three {
-		.card__item {
-	
+		.card__container {
+			grid-template-columns: repeat(1, 1fr);
 			@include desktop {
-				width: calc(100% / 3);
+				grid-template-columns: repeat(3, 1fr);
 			}
-	
-			@include custom(1920px) {
-				width: calc(100% / 3);
+
+			@include desktop {
+				grid-template-columns: repeat(3, 1fr);
 			}
 		}
 	}
