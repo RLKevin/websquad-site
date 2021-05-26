@@ -1,22 +1,22 @@
 button,
 input,
-input[type="text"], 
-input[type="password"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="date"], 
-input[type="month"], 
-input[type="time"], 
-input[type="week"], 
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
 input[type="number"],
-input[type="email"], 
-input[type="url"], 
-input[type="search"], 
-input[type="tel"], 
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
 input[type="color"],
-select, 
+select,
 textarea,
-label { 
+label {
 	font-family: $ff-secondary;
 	font-size: $fs-small;
 	color: $cl-black;
@@ -36,23 +36,21 @@ button {
 }
 
 .gform_wrapper {
- 
-    .gform_validation_errors {
- 
-        .validation_error {
-            padding: 16px 0 16px 16px;
-            border-left: 2px solid $cl-error;
-            margin-bottom: 48px;
-            color: $cl-error;
-        }
-    }
+	.gform_validation_errors {
+		.validation_error {
+			padding: 16px 0 16px 16px;
+			border-left: 2px solid $cl-error;
+			margin-bottom: 48px;
+			color: $cl-error;
+		}
+	}
 }
 
 form {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	
+
 	input {
 		width: 100%;
 		height: 64px;
@@ -78,11 +76,32 @@ form {
 		-webkit-appearance: none;
 	}
 
+	/* respect gravity forms 2.5 layout editor */
+	.gform_fields {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.gfield {
+		width: 100%;
+	}
+
+	@include desktop {
+		.gfield--width-half {
+			width: calc(50% - 48px) !important;
+		}
+
+		.gfield--width-third {
+			width: calc(33.33333% - 64px) !important;
+		}
+	}
+	/* respect gravity forms 2.5 layout editor */
+
 	.gform_body {
 		margin-bottom: 72px;
-	
-		li {
-			
+
+		* {
 			&.gfield {
 				margin-bottom: 24px;
 
@@ -101,7 +120,6 @@ form {
 			}
 
 			&.gfield_error {
-
 				label {
 					color: $cl-error;
 				}
@@ -127,7 +145,7 @@ form {
 				position: relative;
 				@include rectangle;
 				overflow: hidden;
-				
+
 				select {
 					width: 100%;
 					height: 100%;
@@ -139,9 +157,9 @@ form {
 					z-index: 1;
 					text-align: left;
 				}
-								
+
 				&::after {
-					content: '';
+					content: "";
 					position: absolute;
 					top: 0;
 					right: 0;
@@ -159,14 +177,12 @@ form {
 				}
 
 				&:hover {
-
 					&::after {
 						background-color: darken($cl-primary, 10%);
 					}
 				}
 
 				select {
-
 					&:hover {
 						cursor: pointer !important;
 					}
@@ -174,11 +190,10 @@ form {
 			}
 
 			.ginput_container_checkbox {
-
 				.gfield_checkbox {
 					align-items: center;
 					margin: 0;
-				
+
 					li {
 						position: relative;
 						display: block;
@@ -186,11 +201,11 @@ form {
 						@include rectangle;
 						overflow: hidden;
 						background: $cl-white;
-						
+
 						&:not(:first-of-type) {
 							margin-top: 2px;
 						}
-				
+
 						input {
 							display: block;
 							width: 64px;
@@ -200,9 +215,9 @@ form {
 							position: absolute;
 							top: 0;
 							left: 0;
-				
+
 							&:after {
-								content: '';
+								content: "";
 								position: absolute;
 								top: 16px;
 								right: 16px;
@@ -217,13 +232,12 @@ form {
 								transition: 0.25s all ease-in-out;
 								@include rectangle;
 							}
-				
+
 							&:checked:after {
 								background-color: $cl-primary;
 							}
 
 							&:hover {
-
 								&::after {
 									background-color: darken($cl-grey, 20%);
 								}
@@ -233,7 +247,7 @@ form {
 								}
 							}
 						}
-				
+
 						label {
 							padding: 16px 16px 16px 64px;
 							min-height: 64px;
@@ -266,7 +280,7 @@ form {
 		position: relative;
 		text-align: right;
 		order: 3;
-	
+
 		.gform_ajax_spinner {
 			width: 64px;
 			height: 64px;
@@ -276,24 +290,15 @@ form {
 			right: 4px;
 			transform: translate(0, -50%);
 			z-index: 99999;
-	
+
 			@include desktop {
 				bottom: 24px;
 				right: 0px;
 			}
 		}
-	
+
 		.button {
 			margin: 0;
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
