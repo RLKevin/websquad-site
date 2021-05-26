@@ -6,8 +6,20 @@
 
 	// generate variables.scss
 
-		add_action('after_setup_theme', 'generate_variables_scss', 20);
-		generate_variables_scss('20');
+		add_action('after_setup_theme', 'PREFIX_check_theme_version');
+		function PREFIX_check_theme_version() {
+			
+			$current_version = wp_get_theme()->get('Version');
+			$old_version = get_option( 'PREFIX_theme_version' );
+			
+			if ($old_version !== $current_version) {
+				// do some cool stuff
+				generate_variables_scss(20);
+				
+				// update not to run twice
+				update_option('PREFIX_theme_version', $current_version);
+			}
+		}
 	
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
 		function generate_variables_scss($post_id) {
