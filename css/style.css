@@ -4414,7 +4414,7 @@ form label {
   font-size: 12px;
   font-weight: 600;
   color: #C6006D;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   padding: 0;
   -webkit-appearance: none;
 }
@@ -4436,10 +4436,10 @@ form .gfield {
 
 @media only screen and (min-width: 1280px) {
   form .gfield--width-half {
-    width: calc(50% - 48px) !important;
+    width: calc(50% - 24px);
   }
   form .gfield--width-third {
-    width: calc(33.33333% - 64px) !important;
+    width: calc(33.33333% - 32px);
   }
 }
 
