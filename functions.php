@@ -6,34 +6,22 @@
 
 	// generate variables.scss
 
-		add_action('after_setup_theme', 'PREFIX_check_theme_version');
-		function PREFIX_check_theme_version() {
-			
-			$current_version = wp_get_theme()->get('Version');
-			$old_version = get_option( 'PREFIX_theme_version' );
-			
-			if ($old_version !== $current_version) {
-				// do some cool stuff
-				generate_variables_scss(20);
-				
-				// update not to run twice
-				update_option('PREFIX_theme_version', $current_version);
-			}
-		}
+		// when theme is updated via wp pusher
+		add_action('wppusher_theme_was_updated', function($stylesheet) use ($notifier) {
+			generate_variables_scss();
+		});
 	
+		// when any post is saved
 		add_action( 'acf/save_post', 'generate_variables_scss', 20 );
-		function generate_variables_scss($post_id) {
 
-			if ($post_id == 'options') {
+		function generate_variables_scss() {
 
-				$theme = get_stylesheet_directory();
-				ob_start();
-				require($theme . '/scss/assets/variables.php');
-				$scss = ob_get_clean();
-				file_put_contents($theme . '/scss/assets/_variables.scss', $scss, LOCK_EX);
-				touch($theme . '/scss/style.scss');
-
-			}
+			$theme = get_stylesheet_directory();
+			ob_start();
+			require($theme . '/scss/assets/variables.php');
+			$scss = ob_get_clean();
+			file_put_contents($theme . '/scss/assets/_variables.scss', $scss, LOCK_EX);
+			touch($theme . '/scss/style.scss');
 			
 		}
 
