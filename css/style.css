@@ -6317,13 +6317,13 @@ input:-webkit-autofill:active {
 
 .card--basic .card__container {
   gap: 16px;
-  padding: 16px;
+  padding: 96px 16px;
 }
 
 @media only screen and (min-width: 640px) {
   .card--basic .card__container {
     gap: 48px;
-    padding: 48px;
+    padding: 96px 48px;
   }
 }
 

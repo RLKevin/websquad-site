@@ -163,10 +163,10 @@
 
 		#{$self}__container {
 			gap: 16px;
-			padding: 16px;
+			padding: 96px 16px;
 			@include tablet {
 				gap: 48px;
-				padding: 48px;
+				padding: 96px 48px;
 			}
 
 			@include desktop {
