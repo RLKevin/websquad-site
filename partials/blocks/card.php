@@ -254,7 +254,7 @@ function render_block_card() {
 							$type = '';
 							$image = get_the_post_thumbnail_url($id, '960-1-1');
 							$title = get_the_title($id);
-							$text = '';
+							$text = false;
 							$button = get_the_permalink($id);
 
 						endif;
