@@ -289,8 +289,11 @@ function render_block_card() {
 										
 									<?php endif; ?>
 
-									<p><?= $text; ?></p>
+									<?php if ($text): ?>
 
+										<p><?= $text; ?></p>
+
+									<?php endif; ?>
 								</div>
 
 							<?php endif; ?>
