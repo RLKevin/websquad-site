@@ -38,6 +38,10 @@
 			wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js'));
 			wp_enqueue_script('google-maps-api', 'https://maps.googleapis.com/maps/api/js?key='.$maps_api_key);
 			wp_enqueue_script('google-maps-settings', get_template_directory_uri() . '/js/vendor/google-maps-settings.js', array(), filemtime(get_stylesheet_directory() . '/js/vendor/google-maps-settings.js'));
+			$primaryColor = get_field('color-primary', 'options');
+			$secondaryColor = get_field('color-secondary', 'options');
+			echo '<script type="text/javascript">setColors("'.$primaryColor.'", "'.$secondaryColor.'");</script>';
+			// wp_enqueue_script('acf', get_template_directory_uri() . 'plugins/advanced-custom-fields/js/js/input.min.js', array('jquery'), filemtime(get_stylesheet_directory() . 'plugins/advanced-custom-fields/js/js/input.min.js'));
 		}
 
 	// add styles

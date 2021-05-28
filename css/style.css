@@ -7651,6 +7651,10 @@ input:-webkit-autofill:active {
   width: 100%;
 }
 
+.map__map svg {
+  color: #5F207A;
+}
+
 .map__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7727,7 +7731,7 @@ input:-webkit-autofill:active {
 }
 
 .map__content ul li a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -7742,25 +7746,25 @@ input:-webkit-autofill:active {
   border-radius: 0px 0px 0px 0px;
 }
 
-.map__content ul li a.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-white.svg);
+.map__content ul li a svg {
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  -webkit-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
 
-.map__content ul li a.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-white.svg);
+.map__content ul li a:hover svg {
+  color: #5F207A;
 }
 
 .map__content ul li a:hover:before {
   border: 2px solid #5F207A;
   cursor: pointer;
-}
-
-.map__content ul li a:hover.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-}
-
-.map__content ul li a:hover.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 }
 
 .open {

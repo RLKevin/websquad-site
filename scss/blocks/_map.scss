@@ -9,6 +9,9 @@
 		left: 0;
 		height: calc(100% + 96px);
 		width: 100%;
+		svg {
+			color: $cl-primary;
+		}
 	}
 
 	&__content {
@@ -21,12 +24,11 @@
 		// min-height: 480px;
 		// width: calc(100% + 32px);
 		// left: -16px;
-		background:
-			linear-gradient(
-				to right, 
-				rgba($cl-secondary, 1) 0%,
-				rgba($cl-secondary, 0.75) 100%,
-			);
+		background: linear-gradient(
+			to right,
+			rgba($cl-secondary, 1) 0%,
+			rgba($cl-secondary, 0.75) 100%
+		);
 		margin: 96px 0;
 		@include rectangle;
 
@@ -52,7 +54,6 @@
 		}
 
 		ul {
-			
 			&:not(:last-of-type) {
 				margin: 0 0 24px 0;
 			}
@@ -61,9 +62,8 @@
 				color: $cl-white;
 
 				&:not(:last-of-type) {
-
 					a {
-						margin: 0 0 8px 0;;
+						margin: 0 0 8px 0;
 					}
 				}
 
@@ -82,7 +82,7 @@
 					text-overflow: ellipsis;
 
 					&:before {
-						content: '';
+						content: "";
 						position: absolute;
 						top: 0;
 						left: 0;
@@ -92,49 +92,45 @@
 						background-size: 16px 16px;
 						background-repeat: no-repeat;
 						background-position: center;
-						transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+						transition: 0.25s background-image ease-in-out,
+							0.25s border ease-in-out;
 						@include square;
 					}
 
-					&.phone {
+					svg {
+						width: 40px;
+						height: 40px;
+						padding: 12px;
+						position: absolute;
+						top: 0;
+						left: 0;
+						color: $cl-white;
+						transition: 0.25s all ease-in-out;
+					}
 
-						&:before {
-							background-image: url(../img/icons/mobile-android-regular-white.svg);
-						}
+					&.phone {
 					}
 
 					&.mail {
-
-						&:before {
-							background-image: url(../img/icons/envelope-open-regular-white.svg);
-						}
 					}
 
 					&:hover {
-
+						svg {
+							color: $cl-primary;
+						}
 						&:before {
 							border: 2px solid $cl-primary;
 							cursor: pointer;
 						}
 
 						&.phone {
-
-							&:before {
-								background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-							}
 						}
-	
-						&.mail {
 
-							&:before {
-								background-image: url(../img/icons/envelope-open-regular-secondary.svg);
-							}
+						&.mail {
 						}
 					}
 				}
 			}
 		}
 	}
-
-	
 }
